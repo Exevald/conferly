@@ -73,7 +73,7 @@ function HomePage() {
 									size="h3"
 									c={colors.text.primary}
 								>
-									{'Все события\r'}
+									{'Ближайшие мероприятия\r'}
 								</Title>
 								<Group gap="md">
 									<Badge
@@ -81,7 +81,7 @@ function HomePage() {
 										variant="light"
 										size="lg"
 									>
-										{allEvents.length} {'событий\r'}
+										{allEvents.length} {'мероприятий\r'}
 									</Badge>
 									<ViewModeToggle
 										viewMode={viewMode}
@@ -95,8 +95,8 @@ function HomePage() {
 					)
 					: (
 						<EmptyState
-							title="Нет событий"
-							description="Пока нет добавленных событий"
+							title="Нет мероприятий"
+							description="Пока нет добавленных мероприятий"
 							icon={(
 								<IconCalendarOff
 									size={40}

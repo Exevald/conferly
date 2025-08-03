@@ -22,7 +22,7 @@ const getTypeLabel = (type: EventType) => {
 		case 'lecture':
 			return 'Лекция'
 		default:
-			return 'Событие'
+			return 'Мероприятие'
 	}
 }
 
