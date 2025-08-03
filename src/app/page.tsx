@@ -1,11 +1,14 @@
 import {Title, Text, Container, SimpleGrid, Stack, Badge, Group} from '@mantine/core'
+import {IconCalendarOff} from '@tabler/icons-react'
 import {colors} from '@/shared/ui/design-system'
 import EventCard from '@/shared/ui/EventCard'
+import EmptyState from '@/shared/ui/EmptyState'
 import {mockEvents} from '@/shared/lib/mock-data'
 
 function HomePage() {
-    const upcomingEvents = mockEvents.filter(e => e.isUpcoming)
-    const allEvents = mockEvents.filter(e => !e.isUpcoming)
+    const allEvents = mockEvents
+    const upcomingEvents = allEvents.filter(e => e.isUpcoming)
+    const otherEvents = allEvents.filter(e => !e.isUpcoming)
 
     return (
         <Container
@@ -30,7 +33,6 @@ function HomePage() {
                         Какой-то умный абзац, воодушевляющий тебя на обучение и развитие
                     </Text>
                 </Stack>
-                {/* TODO: Добавить EmptyState */}
                 {upcomingEvents.length > 0 && (
                     <Stack gap="lg">
                         <Group justify="space-between" align="center">
@@ -63,8 +65,7 @@ function HomePage() {
                         </SimpleGrid>
                     </Stack>
                 )}
-                {/* TODO: Добавить EmptyState */}
-                {allEvents.length > 0 && (
+                {otherEvents.length > 0 ? (
                     <Stack gap="lg">
                         <Group justify="space-between" align="center">
                             <Title
@@ -79,7 +80,7 @@ function HomePage() {
                                 variant="light"
                                 size="lg"
                             >
-                                {allEvents.length} событий
+                                {otherEvents.length} событий
                             </Badge>
                         </Group>
                         <SimpleGrid
@@ -87,7 +88,7 @@ function HomePage() {
                             spacing="lg"
                             verticalSpacing="lg"
                         >
-                            {allEvents.map((event) => (
+                            {otherEvents.map((event) => (
                                 <EventCard
                                     key={event.id}
                                     event={event}
@@ -95,6 +96,12 @@ function HomePage() {
                             ))}
                         </SimpleGrid>
                     </Stack>
+                ) : (
+                    <EmptyState
+                        title="Нет событий"
+                        description="Пока нет добавленных событий"
+                        icon={<IconCalendarOff size={40} color={colors.text.muted} />}
+                    />
                 )}
             </Stack>
         </Container>
