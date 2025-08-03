@@ -17,7 +17,8 @@ const eslintConfig = [
             "semi": ["error", "never"],
             "prefer-const": "error",
             "no-var": "error",
-            "@typescript-eslint/consistent-type-definitions": ["error", "type"]
+            "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+            "object-curly-spacing": ["error", "never"]
         }
     }
 ]
