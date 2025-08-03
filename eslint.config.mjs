@@ -5,26 +5,41 @@ import {FlatCompat} from "@eslint/eslintrc"
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-})
+const compat = new FlatCompat({baseDirectory: __dirname,})
 
 const eslintConfig = [
     ...compat.extends("next/core-web-vitals", "next/typescript"),
     {
         rules: {
-            "indent": ["error", 4],
-            "semi": ["error", "never"],
+            "indent": ["error",
+                4],
+            "semi": ["error",
+                "never"],
             "prefer-const": "error",
             "no-var": "error",
-            "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-            "object-curly-spacing": ["error", "never"],
-            "react/jsx-max-props-per-line": ["error", {"maximum": 1, "when": "multiline"}],
-            "react/jsx-closing-bracket-location": ["error", "line-aligned"],
-            "react/jsx-first-prop-new-line": ["error", "multiline"]
+            "@typescript-eslint/consistent-type-definitions": ["error",
+                "type"],
+            "object-curly-spacing": ["error",
+                "never"],
+            "react/jsx-max-props-per-line": ["error",
+                {
+                    "maximum": 1,
+                    "when": "multiline"
+                }],
+            "react/jsx-closing-bracket-location": ["error",
+                "line-aligned"],
+            "react/jsx-first-prop-new-line": ["error",
+                "multiline"],
+            "operator-linebreak": ["error",
+                "before"],
+            "multiline-ternary": ["error",
+                "always-multiline"],
+            "array-element-newline": ["error",
+                "always"],
         }
     }
 ]
 
 export default eslintConfig
+
 
