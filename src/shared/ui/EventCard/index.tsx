@@ -62,7 +62,7 @@ function EventCard({
 			>
 				<Group
 					justify="space-between"
-					align="flex-start"
+					align="center"
 				>
 					<Title
 						order={3}
