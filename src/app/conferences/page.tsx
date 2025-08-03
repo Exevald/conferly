@@ -1,7 +1,7 @@
 import {redirect} from 'next/navigation'
 
 function ConferencesListPage() {
-    redirect('/')
+	redirect('/')
 }
 
-export default ConferencesListPage 
+export default ConferencesListPage
