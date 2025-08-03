@@ -1,6 +1,6 @@
-import { dirname } from "path"
-import { fileURLToPath } from "url"
-import { FlatCompat } from "@eslint/eslintrc"
+import {dirname} from "path"
+import {fileURLToPath} from "url"
+import {FlatCompat} from "@eslint/eslintrc"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -18,9 +18,11 @@ const eslintConfig = [
             "prefer-const": "error",
             "no-var": "error",
             "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-            "object-curly-spacing": ["error", "never"]
+            "object-curly-spacing": ["error", "never"],
+            "react/jsx-max-props-per-line": ["error", {"maximum": 2, "when": "multiline"}]
         }
     }
 ]
 
 export default eslintConfig
+
