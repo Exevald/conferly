@@ -1,12 +1,7 @@
-import Link from 'next/link'
+import {redirect} from 'next/navigation'
 
 function AuthPage() {
-    return (
-        <div>
-            <h1>Страница аутентификации</h1>
-            <Link href="/">Вернуться на главную</Link>
-        </div>
-    )
+    redirect('/auth/login')
 }
 
-export default AuthPage 
+export default AuthPage
