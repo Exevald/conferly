@@ -2,6 +2,7 @@ import type {Metadata} from 'next'
 import {MantineProvider, createTheme} from '@mantine/core'
 import '@mantine/core/styles.css'
 import Header from '@/shared/ui/Header'
+import {LAYOUT_CONSTANTS} from '@/shared/ui/constants'
 
 const theme = createTheme({
     primaryColor: 'orange',
@@ -33,13 +34,18 @@ type RootLayoutProps = {
 function RootLayout({children}: RootLayoutProps) {
     return (
         <html lang="ru">
-            <body>
+            <body style={{margin: 0, padding: 0, minHeight: '100vh'}}>
                 <MantineProvider
                     theme={theme}
                     defaultColorScheme="light"
                 >
                     <Header />
-                    <main>
+                    <main
+                        style={{
+                            minHeight: `calc(100vh - ${LAYOUT_CONSTANTS.HEADER_HEIGHT})`,
+                            display: 'flex'
+                        }}
+                    >
                         {children}
                     </main>
                 </MantineProvider>
