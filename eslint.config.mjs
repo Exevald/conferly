@@ -19,7 +19,7 @@ const eslintConfig = [
             "no-var": "error",
             "@typescript-eslint/consistent-type-definitions": ["error", "type"],
             "object-curly-spacing": ["error", "never"],
-            "react/jsx-max-props-per-line": ["error", {"maximum": 2, "when": "multiline"}]
+            "react/jsx-max-props-per-line": ["error", {"maximum": 1}]
         }
     }
 ]
