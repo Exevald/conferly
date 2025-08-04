@@ -2,7 +2,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
   font-weight: 500;
   line-height: 1;
   text-decoration: none;
@@ -17,24 +16,28 @@
   padding: 2px 6px;
   font-size: 10px;
   min-height: 16px;
+  border-radius: 6px;
 }
 
 .badge--sm {
   padding: 4px 8px;
   font-size: 12px;
   min-height: 20px;
+  border-radius: 10px;
 }
 
 .badge--md {
   padding: 6px 10px;
   font-size: 14px;
   min-height: 24px;
+  border-radius: 14px;
 }
 
 .badge--lg {
   padding: 8px 12px;
   font-size: 16px;
   min-height: 28px;
+  border-radius: 16px;
 }
 
 .badge--gray {
