@@ -1,14 +1,14 @@
 'use client'
 
 import {Group} from '@mantine/core'
-import {
-	IconGrid3x3,
-	IconLayoutRows,
-	IconList,
-} from '@tabler/icons-react'
 import {useRouter, useSearchParams} from 'next/navigation'
 import {useTransition} from 'react'
 import {ViewModeToggleButton} from './ViewModeToggleButton'
+import {
+	IconGrid,
+	IconList,
+	IconRows,
+} from '@/shared/ui/Icons/Icons'
 
 const SHOW_GRID_THRESHOLD = 3
 const SHOW_LIST_THRESHOLD = 6
@@ -44,7 +44,7 @@ function ViewModeToggle({
 			<ViewModeToggleButton
 				mode="rows"
 				currentViewMode={viewMode}
-				icon={<IconLayoutRows size={16} />}
+				icon={<IconRows size={16} />}
 				label="Столбец"
 				onClick={() => handleModeChange('rows')}
 				isPending={isPending}
@@ -52,7 +52,7 @@ function ViewModeToggle({
 			<ViewModeToggleButton
 				mode="grid"
 				currentViewMode={viewMode}
-				icon={<IconGrid3x3 size={16} />}
+				icon={<IconGrid size={16} />}
 				label="Сетка"
 				onClick={() => handleModeChange('grid')}
 				disabled={!canShowGrid}
