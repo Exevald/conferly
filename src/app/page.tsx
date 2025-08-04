@@ -50,7 +50,7 @@ function HomePage({searchParams}: HomePageProps) {
 						size="h2"
 						c={colors.text.primary}
 					>
-						{'TODO: Заполнить место над списком\r'}
+						{'TODO: Заполнить место над списком'}
 					</Title>
 					<Text
 						size="lg"
@@ -58,7 +58,7 @@ function HomePage({searchParams}: HomePageProps) {
 						maw={600}
 						mx="auto"
 					>
-						{'Какой-то умный абзац, воодушевляющий тебя на обучение и развитие\r'}
+						{'Какой-то умный абзац, воодушевляющий тебя на обучение и развитие'}
 					</Text>
 				</Stack>
 				{allEvents.length > 0
@@ -73,14 +73,14 @@ function HomePage({searchParams}: HomePageProps) {
 									size="h3"
 									c={colors.text.primary}
 								>
-									{'Ближайшие мероприятия\r'}
+									{'Ближайшие мероприятия'}
 								</Title>
 								<Group gap="md">
 									<Badge
 										color="gray"
 										size="lg"
 									>
-										{allEvents.length} {'мероприятий\r'}
+										{allEvents.length} {'мероприятий'}
 									</Badge>
 									<ViewModeToggle
 										viewMode={viewMode}

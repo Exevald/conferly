@@ -29,7 +29,7 @@ function RegisterForm() {
 					mb="lg"
 					c={colors.text.primary}
 				>
-					{'Регистрация\r'}
+					{'Регистрация'}
 				</Title>
 				<form>
 					<Stack gap="md">
