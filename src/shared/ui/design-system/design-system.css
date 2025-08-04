@@ -1,5 +1,6 @@
+@import './fonts.css';
+
 :root {
-  /* Colors */
   --color-primary: #FA5D20;
   --color-primary-hover: #e8590c;
   --color-secondary: #495057;
