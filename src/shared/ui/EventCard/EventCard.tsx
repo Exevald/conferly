@@ -6,10 +6,10 @@ import {
 	Stack,
 } from '@mantine/core'
 import Link from 'next/link'
-import {EventCardBadges} from './EventCardBadges'
-import {EventCardDescription} from './EventCardDescription'
-import {EventCardHeader} from './EventCardHeader'
-import {EventCardMeta} from './EventCardMeta'
+import {EventCardBadges} from './ui/EventCardBadges'
+import {EventCardDescription} from './ui/EventCardDescription'
+import {EventCardHeader} from './ui/EventCardHeader'
+import {EventCardMeta} from './ui/EventCardMeta'
 import {type Event} from '@/entities/Event'
 
 type EventCardProps = {
@@ -63,4 +63,6 @@ function EventCard({
 	)
 }
 
-export default EventCard
+export {
+	EventCard,
+}

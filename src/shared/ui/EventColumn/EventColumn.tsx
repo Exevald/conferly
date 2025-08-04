@@ -1,20 +1,18 @@
 import {SimpleGrid} from '@mantine/core'
 import {type Event} from '@/entities/Event'
-import EventCard from '@/shared/ui/EventCard'
+import {EventCard} from '@/shared/ui/EventCard/EventCard'
 
-type EventGridProps = {
+type EventColumnProps = {
 	events: Event[],
 }
 
-function EventGrid({
+function EventColumn({
 	events,
-}: EventGridProps) {
+}: EventColumnProps) {
 	return (
 		<SimpleGrid
 			cols={{
 				base: 1,
-				sm: 2,
-				lg: 3,
 			}}
 			spacing="lg"
 			verticalSpacing="lg"
@@ -30,5 +28,5 @@ function EventGrid({
 }
 
 export {
-	EventGrid,
+	EventColumn,
 }

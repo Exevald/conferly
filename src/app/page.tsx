@@ -12,11 +12,11 @@ import {IconCalendarOff} from '@tabler/icons-react'
 import {useState} from 'react'
 import {mockEvents} from '@/shared/lib/mock-data'
 import {colors} from '@/shared/ui/design-system'
-import EmptyState from '@/shared/ui/EmptyState'
-import {EventColumn} from '@/shared/ui/EventColumn'
-import {EventGrid} from '@/shared/ui/EventGrid'
-import {EventList} from '@/shared/ui/EventList'
-import {type ViewMode, ViewModeToggle} from '@/shared/ui/ViewModeToggle'
+import EmptyState from '@/shared/ui/EmptyState/EmptyState'
+import {EventColumn} from '@/shared/ui/EventColumn/EventColumn'
+import {EventGrid} from '@/shared/ui/EventGrid/EventGrid'
+import {EventList} from '@/shared/ui/EventList/EventList'
+import {type ViewMode, ViewModeToggle} from '@/shared/ui/ViewModeToggle/ViewModeToggle'
 
 function HomePage() {
 	const allEvents = mockEvents

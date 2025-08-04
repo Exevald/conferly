@@ -3,7 +3,7 @@ import {type Metadata} from 'next'
 // eslint-disable-next-line import/order
 import '@mantine/core/styles.css'
 import {LAYOUT_CONSTANTS} from '@/shared/ui/constants'
-import Header from '@/shared/ui/Header'
+import Header from '@/shared/ui/Header/Header'
 
 const theme = createTheme({
 	primaryColor: 'orange',

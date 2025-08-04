@@ -1,7 +1,7 @@
 import {Card, Stack} from '@mantine/core'
 import Link from 'next/link'
-import {EventHeader} from './EventHeader'
-import {EventMeta} from './EventMeta'
+import {EventHeader} from './ui/EventHeader'
+import {EventMeta} from './ui/EventMeta'
 import {type Event} from '@/entities/Event'
 
 type EventListItemProps = {
