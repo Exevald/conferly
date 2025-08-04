@@ -1,11 +1,11 @@
-import {Card, Image} from '@mantine/core'
-import Link from 'next/link'
+import {Image} from '@mantine/core'
 import styles from './EventColumnItem.module.css'
 import {EventColumnItemBadges} from './view/EventColumnItemBadges'
 import {EventColumnItemDescription} from './view/EventColumnItemDescription'
 import {EventColumnItemHeader} from './view/EventColumnItemHeader'
 import {EventColumnItemMeta} from './view/EventColumnItemMeta'
 import {type Event} from '@/entities/Event'
+import {Card} from '@/shared/ui/Card/Card'
 import {Stack} from '@/shared/ui/Stack/Stack'
 
 type EventColumnItemProps = {
@@ -17,17 +17,11 @@ function EventColumnItem({
 }: EventColumnItemProps) {
 	return (
 		<Card
-			component={Link}
 			href={`/events/${event.id}`}
 			shadow="sm"
 			padding="lg"
 			radius="md"
 			withBorder={true}
-			style={{
-				textDecoration: 'none',
-				color: 'inherit',
-				cursor: 'pointer',
-			}}
 			className={styles.eventColumnItem}
 		>
 			<div className={styles.imageContainer}>

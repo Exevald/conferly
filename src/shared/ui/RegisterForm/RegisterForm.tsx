@@ -1,7 +1,5 @@
 import {
 	Anchor,
-	Center,
-	Paper,
 	PasswordInput,
 	Text,
 	TextInput,
@@ -10,7 +8,9 @@ import {
 import Link from 'next/link'
 import styles from './RegisterForm.module.css'
 import {Button} from '@/shared/ui/Button/Button'
+import {Center} from '@/shared/ui/Center/Center'
 import {colors} from '@/shared/ui/design-system'
+import {Paper} from '@/shared/ui/Paper/Paper'
 import {Stack} from '@/shared/ui/Stack/Stack'
 
 function RegisterForm() {
@@ -18,7 +18,7 @@ function RegisterForm() {
 		<Center className={styles.container}>
 			<Paper
 				shadow="md"
-				p="xl"
+				padding="xl"
 				radius="md"
 				withBorder={true}
 				className={styles.paper}

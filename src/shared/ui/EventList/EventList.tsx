@@ -1,9 +1,9 @@
-import {Card} from '@mantine/core'
 import Link from 'next/link'
 import styles from './EventList.module.css'
 import {EventHeader} from './view/EventHeader'
 import {EventMeta} from './view/EventMeta'
 import {type Event} from '@/entities/Event'
+import {Card} from '@/shared/ui/Card/Card'
 import {Stack} from '@/shared/ui/Stack/Stack'
 
 type EventListItemProps = {
@@ -15,17 +15,11 @@ function EventListItem({
 }: EventListItemProps) {
 	return (
 		<Card
-			component={Link}
 			href={`/events/${event.id}`}
 			shadow="sm"
 			padding="md"
 			radius="md"
 			withBorder={true}
-			style={{
-				textDecoration: 'none',
-				color: 'inherit',
-				cursor: 'pointer',
-			}}
 			className={styles.eventListItem}
 		>
 			<Stack gap="md">
