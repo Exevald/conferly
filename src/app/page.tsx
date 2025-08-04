@@ -14,12 +14,13 @@ import {Title} from '@/shared/ui/Title/Title'
 import {type ViewMode, ViewModeToggle} from '@/shared/ui/ViewModeToggle/ViewModeToggle'
 
 type HomePageProps = {
-	searchParams: {view?: string},
+	searchParams: Promise<{view?: string}>,
 }
 
-function HomePage({searchParams}: HomePageProps) {
+async function HomePage({searchParams}: HomePageProps) {
 	const allEvents = mockEvents
-	const viewMode = (searchParams.view as ViewMode) || 'rows'
+	const params = await searchParams
+	const viewMode = (params.view as ViewMode) || 'rows'
 
 	const renderEvents = (events: typeof allEvents, mode: ViewMode) => {
 		switch (mode) {
