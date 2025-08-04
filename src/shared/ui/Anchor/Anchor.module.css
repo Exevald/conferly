@@ -1,0 +1,10 @@
+.anchor {
+  text-decoration: none;
+  color: var(--color-info);
+  transition: color 0.15s ease-in-out;
+}
+
+.anchor:hover {
+  color: var(--color-info-hover);
+  text-decoration: underline;
+} 
