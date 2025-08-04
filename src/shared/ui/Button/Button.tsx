@@ -43,7 +43,6 @@ function Button({
 				className={buttonClasses}
 				style={{
 					textDecoration: 'none',
-					color: 'inherit',
 				}}
 			>
 				{children}

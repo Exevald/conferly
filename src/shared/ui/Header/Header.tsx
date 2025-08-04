@@ -36,23 +36,23 @@ function Header() {
 							size="h3"
 							c={colors.text.primary}
 						>
-							{'Conferly\r'}
+							{'Conferly'}
 						</Title>
 					</Link>
 					<Group gap="md">
 						<Button
 							href="/auth"
 							variant="subtle"
-							size="sm"
+							size="md"
 						>
-							{'Войти\r'}
+							{'Войти'}
 						</Button>
 						<Button
 							href="/auth?mode=register"
 							variant="primary"
-							size="sm"
+							size="md"
 						>
-							{'Регистрация\r'}
+							{'Регистрация'}
 						</Button>
 					</Group>
 				</Group>
