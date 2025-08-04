@@ -1,8 +1,4 @@
-import {
-	Card,
-	Image,
-	Stack,
-} from '@mantine/core'
+import {Card, Image} from '@mantine/core'
 import Link from 'next/link'
 import styles from './EventGridItem.module.css'
 import {EventGridItemBadges} from './view/EventGridItemBadges'
@@ -10,6 +6,7 @@ import {EventGridItemDescription} from './view/EventGridItemDescription'
 import {EventGridItemHeader} from './view/EventGridItemHeader'
 import {EventGridItemMeta} from './view/EventGridItemMeta'
 import {type Event} from '@/entities/Event'
+import {Stack} from '@/shared/ui/Stack/Stack'
 
 type EventGridItemProps = {
 	event: Event,
@@ -41,10 +38,7 @@ function EventGridItem({
 					fallbackSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=160&fit=crop"
 				/>
 			</div>
-			<Stack
-				gap="sm"
-				mt="md"
-			>
+			<Stack gap="sm">
 				<EventGridItemHeader event={event} />
 				<EventGridItemDescription event={event} />
 				<EventGridItemBadges event={event} />

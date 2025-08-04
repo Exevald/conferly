@@ -3,7 +3,6 @@ import {
 	Center,
 	Paper,
 	PasswordInput,
-	Stack,
 	Text,
 	TextInput,
 	Title,
@@ -12,6 +11,7 @@ import Link from 'next/link'
 import styles from './LoginForm.module.css'
 import {Button} from '@/shared/ui/Button/Button'
 import {colors} from '@/shared/ui/design-system'
+import {Stack} from '@/shared/ui/Stack/Stack'
 
 function LoginForm() {
 	return (

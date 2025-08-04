@@ -1,10 +1,7 @@
-import {
-	Stack,
-	Text,
-	Title,
-} from '@mantine/core'
+import {Text, Title} from '@mantine/core'
 import {IconInbox} from '@tabler/icons-react'
 import {colors} from '@/shared/ui/design-system'
+import {Stack} from '@/shared/ui/Stack/Stack'
 
 type EmptyStateProps = {
 	title: string,
@@ -18,7 +15,7 @@ function EmptyState({
 	return (
 		<Stack
 			gap="md"
-			ta="center"
+			textAlign="center"
 			py="xl"
 			px="md"
 		>

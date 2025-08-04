@@ -1,8 +1,4 @@
-import {
-	Card,
-	Image,
-	Stack,
-} from '@mantine/core'
+import {Card, Image} from '@mantine/core'
 import Link from 'next/link'
 import styles from './EventColumnItem.module.css'
 import {EventColumnItemBadges} from './view/EventColumnItemBadges'
@@ -10,6 +6,7 @@ import {EventColumnItemDescription} from './view/EventColumnItemDescription'
 import {EventColumnItemHeader} from './view/EventColumnItemHeader'
 import {EventColumnItemMeta} from './view/EventColumnItemMeta'
 import {type Event} from '@/entities/Event'
+import {Stack} from '@/shared/ui/Stack/Stack'
 
 type EventColumnItemProps = {
 	event: Event,
@@ -41,10 +38,7 @@ function EventColumnItem({
 					fallbackSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=240&fit=crop"
 				/>
 			</div>
-			<Stack
-				gap="md"
-				mt="lg"
-			>
+			<Stack gap="md">
 				<EventColumnItemHeader event={event} />
 				<EventColumnItemDescription event={event} />
 				<EventColumnItemBadges event={event} />

@@ -1,11 +1,11 @@
 import {
 	Box,
-	Container,
 	Group,
 	Title,
 } from '@mantine/core'
 import Link from 'next/link'
 import {Button} from '@/shared/ui/Button/Button'
+import {Container} from '@/shared/ui/Container/Container'
 import {colors} from '@/shared/ui/design-system'
 
 function Header() {
