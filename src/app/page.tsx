@@ -1,5 +1,4 @@
 import {
-	Badge,
 	Container,
 	Group,
 	Stack,
@@ -8,6 +7,7 @@ import {
 } from '@mantine/core'
 import {IconCalendarOff} from '@tabler/icons-react'
 import {mockEvents} from '@/shared/lib/mock-data'
+import {Badge} from '@/shared/ui/Badge/Badge'
 import {colors} from '@/shared/ui/design-system'
 import EmptyState from '@/shared/ui/EmptyState/EmptyState'
 import {EventColumn} from '@/shared/ui/EventColumn/EventColumn'
@@ -78,7 +78,6 @@ function HomePage({searchParams}: HomePageProps) {
 								<Group gap="md">
 									<Badge
 										color="gray"
-										variant="light"
 										size="lg"
 									>
 										{allEvents.length} {'мероприятий\r'}
