@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {type ReactNode} from 'react'
 import styles from './Button.module.css'
 
@@ -13,6 +14,7 @@ type ButtonProps = {
 	className?: string,
 	type?: 'button' | 'submit',
 	fullWidth?: boolean,
+	href?: string,
 }
 
 function Button({
@@ -24,6 +26,7 @@ function Button({
 	className = '',
 	type = 'button',
 	fullWidth = false,
+	href,
 }: ButtonProps) {
 	const buttonClasses = [
 		styles.button,
@@ -32,6 +35,21 @@ function Button({
 		fullWidth && styles['button--fullWidth'],
 		className,
 	].filter(Boolean).join(' ')
+
+	if (href) {
+		return (
+			<Link
+				href={href}
+				className={buttonClasses}
+				style={{
+					textDecoration: 'none',
+					color: 'inherit',
+				}}
+			>
+				{children}
+			</Link>
+		)
+	}
 
 	return (
 		<button
