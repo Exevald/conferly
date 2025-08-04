@@ -1,9 +1,11 @@
-import {Badge, Group} from '@mantine/core'
 import {
 	type Event,
 	getTypeColor,
 	getTypeLabel,
 } from '@/entities/Event'
+import {Badge} from '@/shared/ui/Badge/Badge'
+import {Group} from '@/shared/ui/Group/Group'
+
 
 type EventColumnItemBadgesProps = {
 	event: Event,
@@ -15,18 +17,16 @@ function EventColumnItemBadges({
 	return (
 		<Group
 			gap="xs"
-			wrap="wrap"
+			wrap={true}
 		>
 			<Badge
 				color={getTypeColor(event.type)}
-				variant="light"
 				size="md"
 			>
 				{getTypeLabel(event.type)}
 			</Badge>
 			<Badge
 				color="gray"
-				variant="light"
 				size="md"
 			>
 				{event.attendees} {'участников'}

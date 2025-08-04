@@ -1,6 +1,5 @@
-import {Text} from '@mantine/core'
 import {type Event} from '@/entities/Event'
-import {colors} from '@/shared/ui/design-system'
+import {Text} from '@/shared/ui/Text/Text'
 
 type EventColumnItemDescriptionProps = {
 	event: Event,
@@ -12,7 +11,7 @@ function EventColumnItemDescription({
 	return (
 		<Text
 			size="md"
-			c={colors.text.secondary}
+			color="secondary"
 			lineClamp={2}
 		>
 			{event.description}

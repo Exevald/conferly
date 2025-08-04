@@ -1,9 +1,9 @@
 'use client'
 
-import {Group} from '@mantine/core'
 import {useRouter, useSearchParams} from 'next/navigation'
 import {useTransition} from 'react'
 import {ViewModeToggleButton} from './ViewModeToggleButton'
+import {Group} from '@/shared/ui/Group/Group'
 import {
 	IconGrid,
 	IconList,

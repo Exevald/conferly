@@ -1,10 +1,4 @@
-import {
-	Container,
-	Group,
-	Stack,
-	Text,
-	Title,
-} from '@mantine/core'
+import {Container, Stack} from '@mantine/core'
 import {IconCalendarOff} from '@tabler/icons-react'
 import {mockEvents} from '@/shared/lib/mock-data'
 import {Badge} from '@/shared/ui/Badge/Badge'
@@ -13,6 +7,9 @@ import EmptyState from '@/shared/ui/EmptyState/EmptyState'
 import {EventColumn} from '@/shared/ui/EventColumn/EventColumn'
 import {EventGrid} from '@/shared/ui/EventGrid/EventGrid'
 import {EventList} from '@/shared/ui/EventList/EventList'
+import {Group} from '@/shared/ui/Group/Group'
+import {Text} from '@/shared/ui/Text/Text'
+import {Title} from '@/shared/ui/Title/Title'
 import {type ViewMode, ViewModeToggle} from '@/shared/ui/ViewModeToggle/ViewModeToggle'
 
 type HomePageProps = {
@@ -48,15 +45,17 @@ function HomePage({searchParams}: HomePageProps) {
 					<Title
 						order={1}
 						size="h2"
-						c={colors.text.primary}
+						color="primary"
+						align="center"
 					>
 						{'TODO: Заполнить место над списком'}
 					</Title>
 					<Text
 						size="lg"
-						c={colors.text.secondary}
-						maw={600}
-						mx="auto"
+						color="secondary"
+						align="center"
+						maxWidth={600}
+						margin="0 auto"
 					>
 						{'Какой-то умный абзац, воодушевляющий тебя на обучение и развитие'}
 					</Text>
@@ -65,13 +64,13 @@ function HomePage({searchParams}: HomePageProps) {
 					? (
 						<Stack gap="lg">
 							<Group
-								justify="space-between"
+								justify="apart"
 								align="center"
 							>
 								<Title
 									order={2}
 									size="h3"
-									c={colors.text.primary}
+									color="primary"
 								>
 									{'Ближайшие мероприятия'}
 								</Title>

@@ -1,10 +1,12 @@
 import {
-	Badge,
-	Group,
-	Title,
-} from '@mantine/core'
-import {type Event} from '@/entities/Event'
-import {colors} from '@/shared/ui/design-system'
+	type Event,
+	getTypeColor,
+	getTypeLabel,
+} from '@/entities/Event'
+import {Badge} from '@/shared/ui/Badge/Badge'
+import {Group} from '@/shared/ui/Group/Group'
+import {Title} from '@/shared/ui/Title/Title'
+
 
 type EventGridItemHeaderProps = {
 	event: Event,
@@ -15,26 +17,23 @@ function EventGridItemHeader({
 }: EventGridItemHeaderProps) {
 	return (
 		<Group
-			justify="space-between"
+			justify="apart"
 			align="center"
 		>
 			<Title
 				order={3}
-				size="h4"
+				size="h5"
+				color="primary"
 				lineClamp={2}
-				c={colors.text.primary}
 			>
 				{event.name}
 			</Title>
-			{event.isUpcoming && (
-				<Badge
-					color="red"
-					variant="light"
-					size="sm"
-				>
-					{'Скоро'}
-				</Badge>
-			)}
+			<Badge
+				color={getTypeColor(event.type)}
+				size="sm"
+			>
+				{getTypeLabel(event.type)}
+			</Badge>
 		</Group>
 	)
 }

@@ -1,9 +1,11 @@
-import {Badge, Group} from '@mantine/core'
 import {
 	type Event,
 	getTypeColor,
 	getTypeLabel,
 } from '@/entities/Event'
+import {Badge} from '@/shared/ui/Badge/Badge'
+import {Group} from '@/shared/ui/Group/Group'
+
 
 type EventGridItemBadgesProps = {
 	event: Event,
@@ -15,18 +17,16 @@ function EventGridItemBadges({
 	return (
 		<Group
 			gap="xs"
-			wrap="wrap"
+			wrap={true}
 		>
 			<Badge
 				color={getTypeColor(event.type)}
-				variant="light"
 				size="sm"
 			>
 				{getTypeLabel(event.type)}
 			</Badge>
 			<Badge
 				color="gray"
-				variant="light"
 				size="sm"
 			>
 				{event.attendees} {'участников'}

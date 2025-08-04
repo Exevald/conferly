@@ -1,14 +1,11 @@
 import {
-	Badge,
-	Group,
-	Title,
-} from '@mantine/core'
-import {
 	type Event,
 	getTypeColor,
 	getTypeLabel,
 } from '@/entities/Event'
-import {colors} from '@/shared/ui/design-system'
+import {Badge} from '@/shared/ui/Badge/Badge'
+import {Group} from '@/shared/ui/Group/Group'
+import {Title} from '@/shared/ui/Title/Title'
 
 type EventHeaderProps = {
 	event: Event,
@@ -19,36 +16,23 @@ function EventHeader({
 }: EventHeaderProps) {
 	return (
 		<Group
-			justify="space-between"
+			justify="apart"
+			align="center"
 		>
 			<Title
 				order={3}
-				size="h5"
-				c={colors.text.primary}
-				lineClamp={1}
+				size="h4"
+				color="primary"
+				lineClamp={2}
 			>
 				{event.name}
 			</Title>
-			<Group
-				gap="xs"
+			<Badge
+				color={getTypeColor(event.type)}
+				size="sm"
 			>
-				{event.isUpcoming && (
-					<Badge
-						size="xs"
-						color="red"
-						variant="light"
-					>
-						{'Скоро'}
-					</Badge>
-				)}
-				<Badge
-					size="xs"
-					color={getTypeColor(event.type)}
-					variant="light"
-				>
-					{getTypeLabel(event.type)}
-				</Badge>
-			</Group>
+				{getTypeLabel(event.type)}
+			</Badge>
 		</Group>
 	)
 }

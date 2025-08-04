@@ -1,7 +1,7 @@
-import {Group, Text} from '@mantine/core'
-import {IconCalendar, IconMapPin} from '@tabler/icons-react'
 import {type Event} from '@/entities/Event'
-import {colors} from '@/shared/ui/design-system'
+import {Group} from '@/shared/ui/Group/Group'
+import {IconCalendar, IconMapPin} from '@/shared/ui/Icons/Icons'
+import {Text} from '@/shared/ui/Text/Text'
 
 type EventGridItemMetaProps = {
 	event: Event,
@@ -11,19 +11,22 @@ function EventGridItemMeta({
 	event,
 }: EventGridItemMetaProps) {
 	return (
-		<Group
-			gap="xs"
-			c={colors.text.secondary}
-		>
+		<Group gap="md">
 			<Group gap="xs">
 				<IconCalendar size={16} />
-				<Text size="sm">
+				<Text
+					size="sm"
+					color="secondary"
+				>
 					{event.date}
 				</Text>
 			</Group>
 			<Group gap="xs">
 				<IconMapPin size={16} />
-				<Text size="sm">
+				<Text
+					size="sm"
+					color="secondary"
+				>
 					{event.location}
 				</Text>
 			</Group>
