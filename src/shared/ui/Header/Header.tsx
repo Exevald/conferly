@@ -1,11 +1,11 @@
 import {
 	Box,
-	Button,
 	Container,
 	Group,
 	Title,
 } from '@mantine/core'
 import Link from 'next/link'
+import {Button} from '@/shared/ui/Button/Button'
 import {colors} from '@/shared/ui/design-system'
 
 function Header() {
@@ -41,20 +41,16 @@ function Header() {
 					</Link>
 					<Group gap="md">
 						<Button
-							component={Link}
 							href="/auth"
 							variant="subtle"
 							size="sm"
-							c={colors.text.primary}
 						>
 							{'Войти\r'}
 						</Button>
 						<Button
-							component={Link}
 							href="/auth?mode=register"
-							variant="filled"
+							variant="primary"
 							size="sm"
-							bg={colors.primary}
 						>
 							{'Регистрация\r'}
 						</Button>

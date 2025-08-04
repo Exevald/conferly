@@ -1,6 +1,5 @@
 import {
 	Anchor,
-	Button,
 	Center,
 	Paper,
 	PasswordInput,
@@ -11,6 +10,7 @@ import {
 } from '@mantine/core'
 import Link from 'next/link'
 import styles from './LoginForm.module.css'
+import {Button} from '@/shared/ui/Button/Button'
 import {colors} from '@/shared/ui/design-system'
 
 function LoginForm() {
@@ -46,9 +46,9 @@ function LoginForm() {
 						/>
 						<Button
 							type="submit"
+							variant="primary"
 							fullWidth={true}
 							size="md"
-							bg={colors.primary}
 						>
 							{'Войти'}
 						</Button>
