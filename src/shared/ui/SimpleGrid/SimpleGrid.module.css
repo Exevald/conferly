@@ -1,0 +1,142 @@
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.grid--cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid--cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--cols-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid--spacing-xs {
+  gap: 8px;
+}
+
+.grid--spacing-sm {
+  gap: 12px;
+}
+
+.grid--spacing-md {
+  gap: 16px;
+}
+
+.grid--spacing-lg {
+  gap: 24px;
+}
+
+.grid--spacing-xl {
+  gap: 32px;
+}
+
+@media (max-width: 576px) {
+  .grid--breakpoint-xs-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .grid--breakpoint-xs-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--breakpoint-xs-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .grid--breakpoint-sm-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .grid--breakpoint-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--breakpoint-sm-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .grid--breakpoint-md-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .grid--breakpoint-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--breakpoint-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid--breakpoint-md-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .grid--breakpoint-lg-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .grid--breakpoint-lg-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--breakpoint-lg-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid--breakpoint-lg-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .grid--breakpoint-lg-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1201px) {
+  .grid--breakpoint-xl-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .grid--breakpoint-xl-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--breakpoint-xl-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid--breakpoint-xl-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .grid--breakpoint-xl-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .grid--breakpoint-xl-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+} 
