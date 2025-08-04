@@ -1,11 +1,10 @@
-'use client'
-
 import {
 	Card,
 	Image,
 	Stack,
 } from '@mantine/core'
 import Link from 'next/link'
+import styles from './EventCard.module.css'
 import {EventCardBadges} from './view/EventCardBadges'
 import {EventCardDescription} from './view/EventCardDescription'
 import {EventCardHeader} from './view/EventCardHeader'
@@ -30,26 +29,18 @@ function EventCard({
 			style={{
 				textDecoration: 'none',
 				color: 'inherit',
-				transition: 'transform 0.2s ease, box-shadow 0.2s ease',
 				cursor: 'pointer',
 			}}
-			onMouseEnter={e => {
-				e.currentTarget.style.transform = 'translateY(-4px)'
-				e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)'
-			}}
-			onMouseLeave={e => {
-				e.currentTarget.style.transform = 'translateY(0)'
-				e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)'
-			}}
+			className={styles.eventCard}
 		>
-			<Card.Section>
+			<div className={styles.imageContainer}>
 				<Image
 					src={event.image}
 					height={160}
 					alt={event.name}
 					fallbackSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=160&fit=crop"
 				/>
-			</Card.Section>
+			</div>
 			<Stack
 				gap="sm"
 				mt="md"

@@ -1,14 +1,14 @@
-import {
-	Button,
-	Group,
-	Tooltip,
-} from '@mantine/core'
+'use client'
+
+import {Group} from '@mantine/core'
 import {
 	IconGrid3x3,
 	IconLayoutRows,
 	IconList,
 } from '@tabler/icons-react'
-import {colors} from '@/shared/ui/design-system'
+import {useRouter, useSearchParams} from 'next/navigation'
+import {useTransition} from 'react'
+import {ViewModeToggleButton} from './ViewModeToggleButton'
 
 const SHOW_GRID_THRESHOLD = 3
 const SHOW_LIST_THRESHOLD = 6
@@ -17,84 +17,56 @@ type ViewMode = 'grid' | 'list' | 'rows'
 
 type ViewModeToggleProps = {
 	viewMode: ViewMode,
-	onViewModeChange: (mode: ViewMode) => void,
 	eventCount: number,
 }
 
 function ViewModeToggle({
 	viewMode,
-	onViewModeChange,
 	eventCount,
 }: ViewModeToggleProps) {
+	const router = useRouter()
+	const searchParams = useSearchParams()
+	const [isPending, startTransition] = useTransition()
+
 	const canShowGrid = eventCount >= SHOW_GRID_THRESHOLD
 	const canShowList = eventCount >= SHOW_LIST_THRESHOLD
 
+	const handleModeChange = (mode: ViewMode) => {
+		startTransition(() => {
+			const params = new URLSearchParams(searchParams)
+			params.set('view', mode)
+			router.replace(`?${params.toString()}`)
+		})
+	}
+
 	return (
 		<Group gap="xs">
-			<Tooltip
+			<ViewModeToggleButton
+				mode="grid"
+				currentViewMode={viewMode}
+				icon={<IconGrid3x3 size={16} />}
 				label="Сетка"
+				onClick={() => handleModeChange('grid')}
 				disabled={!canShowGrid}
-			>
-				<Button
-					variant={viewMode === 'grid'
-						? 'filled'
-						: 'subtle'}
-					size="sm"
-					onClick={() => onViewModeChange('grid')}
-					disabled={!canShowGrid}
-					bg={viewMode === 'grid'
-						? colors.primary
-						: undefined}
-					style={{
-						minWidth: '36px',
-						padding: '0',
-					}}
-				>
-					<IconGrid3x3 size={16} />
-				</Button>
-			</Tooltip>
-			<Tooltip
+				isPending={isPending}
+			/>
+			<ViewModeToggleButton
+				mode="rows"
+				currentViewMode={viewMode}
+				icon={<IconLayoutRows size={16} />}
 				label="Столбец"
-			>
-				<Button
-					variant={viewMode === 'rows'
-						? 'filled'
-						: 'subtle'}
-					size="sm"
-					onClick={() => onViewModeChange('rows')}
-					bg={viewMode === 'rows'
-						? colors.primary
-						: undefined}
-					style={{
-						minWidth: '36px',
-						padding: '0',
-					}}
-				>
-					<IconLayoutRows size={16} />
-				</Button>
-			</Tooltip>
-			<Tooltip
+				onClick={() => handleModeChange('rows')}
+				isPending={isPending}
+			/>
+			<ViewModeToggleButton
+				mode="list"
+				currentViewMode={viewMode}
+				icon={<IconList size={16} />}
 				label="Список"
+				onClick={() => handleModeChange('list')}
 				disabled={!canShowList}
-			>
-				<Button
-					variant={viewMode === 'list'
-						? 'filled'
-						: 'subtle'}
-					size="sm"
-					onClick={() => onViewModeChange('list')}
-					disabled={!canShowList}
-					bg={viewMode === 'list'
-						? colors.primary
-						: undefined}
-					style={{
-						minWidth: '36px',
-						padding: '0',
-					}}
-				>
-					<IconList size={16} />
-				</Button>
-			</Tooltip>
+				isPending={isPending}
+			/>
 		</Group>
 	)
 }

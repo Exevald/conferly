@@ -1,0 +1,12 @@
+.eventCard {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.eventCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.imageContainer {
+  margin: -24px -24px 0 -24px;
+} 

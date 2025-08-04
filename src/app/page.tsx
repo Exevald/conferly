@@ -1,5 +1,3 @@
-'use client'
-
 import {
 	Badge,
 	Container,
@@ -9,7 +7,6 @@ import {
 	Title,
 } from '@mantine/core'
 import {IconCalendarOff} from '@tabler/icons-react'
-import {useState} from 'react'
 import {mockEvents} from '@/shared/lib/mock-data'
 import {colors} from '@/shared/ui/design-system'
 import EmptyState from '@/shared/ui/EmptyState/EmptyState'
@@ -18,10 +15,13 @@ import {EventGrid} from '@/shared/ui/EventGrid/EventGrid'
 import {EventList} from '@/shared/ui/EventList/EventList'
 import {type ViewMode, ViewModeToggle} from '@/shared/ui/ViewModeToggle/ViewModeToggle'
 
-function HomePage() {
-	const allEvents = mockEvents
+type HomePageProps = {
+	searchParams: {view?: string},
+}
 
-	const [viewMode, setViewMode] = useState<ViewMode>('grid')
+function HomePage({searchParams}: HomePageProps) {
+	const allEvents = mockEvents
+	const viewMode = (searchParams.view as ViewMode) || 'grid'
 
 	const renderEvents = (events: typeof allEvents, mode: ViewMode) => {
 		switch (mode) {
@@ -85,7 +85,6 @@ function HomePage() {
 									</Badge>
 									<ViewModeToggle
 										viewMode={viewMode}
-										onViewModeChange={setViewMode}
 										eventCount={allEvents.length}
 									/>
 								</Group>
