@@ -4,20 +4,20 @@ import {
 	Stack,
 } from '@mantine/core'
 import Link from 'next/link'
-import styles from './EventCard.module.css'
-import {EventCardBadges} from './view/EventCardBadges'
-import {EventCardDescription} from './view/EventCardDescription'
-import {EventCardHeader} from './view/EventCardHeader'
-import {EventCardMeta} from './view/EventCardMeta'
+import styles from './EventGridItem.module.css'
+import {EventGridItemBadges} from './view/EventGridItemBadges'
+import {EventGridItemDescription} from './view/EventGridItemDescription'
+import {EventGridItemHeader} from './view/EventGridItemHeader'
+import {EventGridItemMeta} from './view/EventGridItemMeta'
 import {type Event} from '@/entities/Event'
 
-type EventCardProps = {
+type EventGridItemProps = {
 	event: Event,
 }
 
-function EventCard({
+function EventGridItem({
 	event,
-}: EventCardProps) {
+}: EventGridItemProps) {
 	return (
 		<Card
 			component={Link}
@@ -31,7 +31,7 @@ function EventCard({
 				color: 'inherit',
 				cursor: 'pointer',
 			}}
-			className={styles.eventCard}
+			className={styles.eventGridItem}
 		>
 			<div className={styles.imageContainer}>
 				<Image
@@ -45,15 +45,15 @@ function EventCard({
 				gap="sm"
 				mt="md"
 			>
-				<EventCardHeader event={event} />
-				<EventCardDescription event={event} />
-				<EventCardBadges event={event} />
-				<EventCardMeta event={event} />
+				<EventGridItemHeader event={event} />
+				<EventGridItemDescription event={event} />
+				<EventGridItemBadges event={event} />
+				<EventGridItemMeta event={event} />
 			</Stack>
 		</Card>
 	)
 }
 
 export {
-	EventCard,
+	EventGridItem,
 }

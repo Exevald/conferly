@@ -5,13 +5,13 @@ import {
 	getTypeLabel,
 } from '@/entities/Event'
 
-type EventCardBadgesProps = {
+type EventColumnItemBadgesProps = {
 	event: Event,
 }
 
-function EventCardBadges({
+function EventColumnItemBadges({
 	event,
-}: EventCardBadgesProps) {
+}: EventColumnItemBadgesProps) {
 	return (
 		<Group
 			gap="xs"
@@ -20,14 +20,14 @@ function EventCardBadges({
 			<Badge
 				color={getTypeColor(event.type)}
 				variant="light"
-				size="sm"
+				size="md"
 			>
 				{getTypeLabel(event.type)}
 			</Badge>
 			<Badge
 				color="gray"
 				variant="light"
-				size="sm"
+				size="md"
 			>
 				{event.attendees} {'участников'}
 			</Badge>
@@ -36,5 +36,5 @@ function EventCardBadges({
 }
 
 export {
-	EventCardBadges,
+	EventColumnItemBadges,
 }

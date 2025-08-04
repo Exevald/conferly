@@ -3,27 +3,27 @@ import {IconCalendar, IconMapPin} from '@tabler/icons-react'
 import {type Event} from '@/entities/Event'
 import {colors} from '@/shared/ui/design-system'
 
-type EventCardMetaProps = {
+type EventColumnItemMetaProps = {
 	event: Event,
 }
 
-function EventCardMeta({
+function EventColumnItemMeta({
 	event,
-}: EventCardMetaProps) {
+}: EventColumnItemMetaProps) {
 	return (
 		<Group
 			gap="xs"
 			c={colors.text.secondary}
 		>
 			<Group gap="xs">
-				<IconCalendar size={16} />
-				<Text size="sm">
+				<IconCalendar size={18} />
+				<Text size="md">
 					{event.date}
 				</Text>
 			</Group>
 			<Group gap="xs">
-				<IconMapPin size={16} />
-				<Text size="sm">
+				<IconMapPin size={18} />
+				<Text size="md">
 					{event.location}
 				</Text>
 			</Group>
@@ -32,5 +32,5 @@ function EventCardMeta({
 }
 
 export {
-	EventCardMeta,
+	EventColumnItemMeta,
 }

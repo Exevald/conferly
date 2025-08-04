@@ -1,6 +1,6 @@
 import {SimpleGrid} from '@mantine/core'
+import {EventColumnItem} from './EventColumnItem'
 import {type Event} from '@/entities/Event'
-import {EventCard} from '@/shared/ui/EventCard/EventCard'
 
 type EventColumnProps = {
 	events: Event[],
@@ -14,11 +14,11 @@ function EventColumn({
 			cols={{
 				base: 1,
 			}}
-			spacing="lg"
-			verticalSpacing="lg"
+			spacing="xl"
+			verticalSpacing="xl"
 		>
 			{events.map(event => (
-				<EventCard
+				<EventColumnItem
 					key={event.id}
 					event={event}
 				/>

@@ -6,13 +6,13 @@ import {
 import {type Event} from '@/entities/Event'
 import {colors} from '@/shared/ui/design-system'
 
-type EventCardHeaderProps = {
+type EventColumnItemHeaderProps = {
 	event: Event,
 }
 
-function EventCardHeader({
+function EventColumnItemHeader({
 	event,
-}: EventCardHeaderProps) {
+}: EventColumnItemHeaderProps) {
 	return (
 		<Group
 			justify="space-between"
@@ -20,7 +20,7 @@ function EventCardHeader({
 		>
 			<Title
 				order={3}
-				size="h4"
+				size="h3"
 				lineClamp={2}
 				c={colors.text.primary}
 			>
@@ -30,7 +30,7 @@ function EventCardHeader({
 				<Badge
 					color="red"
 					variant="light"
-					size="sm"
+					size="lg"
 				>
 					{'Скоро'}
 				</Badge>
@@ -40,5 +40,5 @@ function EventCardHeader({
 }
 
 export {
-	EventCardHeader,
+	EventColumnItemHeader,
 }

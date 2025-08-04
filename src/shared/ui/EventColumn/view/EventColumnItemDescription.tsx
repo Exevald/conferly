@@ -2,16 +2,16 @@ import {Text} from '@mantine/core'
 import {type Event} from '@/entities/Event'
 import {colors} from '@/shared/ui/design-system'
 
-type EventCardDescriptionProps = {
+type EventColumnItemDescriptionProps = {
 	event: Event,
 }
 
-function EventCardDescription({
+function EventColumnItemDescription({
 	event,
-}: EventCardDescriptionProps) {
+}: EventColumnItemDescriptionProps) {
 	return (
 		<Text
-			size="sm"
+			size="md"
 			c={colors.text.secondary}
 			lineClamp={2}
 		>
@@ -21,5 +21,5 @@ function EventCardDescription({
 }
 
 export {
-	EventCardDescription,
+	EventColumnItemDescription,
 }
