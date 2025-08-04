@@ -1,7 +1,8 @@
-import {Text, Title} from '@mantine/core'
 import {IconInbox} from '@tabler/icons-react'
 import {colors} from '@/shared/ui/design-system'
 import {Stack} from '@/shared/ui/Stack/Stack'
+import {Text} from '@/shared/ui/Text/Text'
+import {Title} from '@/shared/ui/Title/Title'
 
 type EmptyStateProps = {
 	title: string,
@@ -41,15 +42,15 @@ function EmptyState({
 			<Title
 				order={3}
 				size="h4"
-				c={colors.text.primary}
+				color="primary"
 			>
 				{title}
 			</Title>
 			<Text
 				size="lg"
-				c={colors.text.secondary}
-				maw={400}
-				mx="auto"
+				color="secondary"
+				maxWidth={400}
+				margin="0 auto"
 			>
 				{description}
 			</Text>

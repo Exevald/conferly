@@ -1,4 +1,3 @@
-import {Image} from '@mantine/core'
 import styles from './EventGridItem.module.css'
 import {EventGridItemBadges} from './view/EventGridItemBadges'
 import {EventGridItemDescription} from './view/EventGridItemDescription'
@@ -6,6 +5,7 @@ import {EventGridItemHeader} from './view/EventGridItemHeader'
 import {EventGridItemMeta} from './view/EventGridItemMeta'
 import {type Event} from '@/entities/Event'
 import {Card} from '@/shared/ui/Card/Card'
+import {Image} from '@/shared/ui/Image/Image'
 import {Stack} from '@/shared/ui/Stack/Stack'
 
 type EventGridItemProps = {

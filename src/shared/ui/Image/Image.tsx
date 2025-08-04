@@ -8,7 +8,6 @@ type ImageProps = {
 	width?: number,
 	fallbackSrc?: string,
 	className?: string,
-	/** Дополнительные стили */
 	style?: React.CSSProperties,
 }
 

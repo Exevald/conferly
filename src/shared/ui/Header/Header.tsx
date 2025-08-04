@@ -1,12 +1,10 @@
-import {
-	Box,
-	Group,
-	Title,
-} from '@mantine/core'
 import Link from 'next/link'
+import {Box} from '@/shared/ui/Box/Box'
 import {Button} from '@/shared/ui/Button/Button'
 import {Container} from '@/shared/ui/Container/Container'
 import {colors} from '@/shared/ui/design-system'
+import {Group} from '@/shared/ui/Group/Group'
+import {Title} from '@/shared/ui/Title/Title'
 
 function Header() {
 	return (
@@ -21,7 +19,7 @@ function Header() {
 		>
 			<Container size="lg">
 				<Group
-					justify="space-between"
+					justify="apart"
 					align="center"
 				>
 					<Link
@@ -34,7 +32,7 @@ function Header() {
 						<Title
 							order={1}
 							size="h3"
-							c={colors.text.primary}
+							color="primary"
 						>
 							{'Conferly'}
 						</Title>

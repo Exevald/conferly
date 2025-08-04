@@ -1,4 +1,3 @@
-import {Image} from '@mantine/core'
 import styles from './EventColumnItem.module.css'
 import {EventColumnItemBadges} from './view/EventColumnItemBadges'
 import {EventColumnItemDescription} from './view/EventColumnItemDescription'
@@ -6,6 +5,7 @@ import {EventColumnItemHeader} from './view/EventColumnItemHeader'
 import {EventColumnItemMeta} from './view/EventColumnItemMeta'
 import {type Event} from '@/entities/Event'
 import {Card} from '@/shared/ui/Card/Card'
+import {Image} from '@/shared/ui/Image/Image'
 import {Stack} from '@/shared/ui/Stack/Stack'
 
 type EventColumnItemProps = {

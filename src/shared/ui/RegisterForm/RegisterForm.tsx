@@ -1,17 +1,15 @@
-import {
-	Anchor,
-	PasswordInput,
-	Text,
-	TextInput,
-	Title,
-} from '@mantine/core'
 import Link from 'next/link'
 import styles from './RegisterForm.module.css'
+import {Anchor} from '@/shared/ui/Anchor/Anchor'
 import {Button} from '@/shared/ui/Button/Button'
 import {Center} from '@/shared/ui/Center/Center'
 import {colors} from '@/shared/ui/design-system'
 import {Paper} from '@/shared/ui/Paper/Paper'
+import {PasswordInput} from '@/shared/ui/PasswordInput/PasswordInput'
 import {Stack} from '@/shared/ui/Stack/Stack'
+import {Text} from '@/shared/ui/Text/Text'
+import {TextInput} from '@/shared/ui/TextInput/TextInput'
+import {Title} from '@/shared/ui/Title/Title'
 
 function RegisterForm() {
 	return (
@@ -25,9 +23,10 @@ function RegisterForm() {
 			>
 				<Title
 					order={2}
-					ta="center"
-					mb="lg"
-					c={colors.text.primary}
+					size="h3"
+					color="primary"
+					align="center"
+					margin="0 0 16px 0"
 				>
 					{'Регистрация'}
 				</Title>
@@ -63,16 +62,15 @@ function RegisterForm() {
 							{'Зарегистрироваться'}
 						</Button>
 						<Text
-							ta="center"
 							size="sm"
-							c={colors.text.secondary}
+							color="secondary"
+							align="center"
 						>
 							{'Уже есть аккаунт?'}
 							{' '}
 							<Anchor
-								component={Link}
 								href="/auth?mode=login"
-								c={colors.text.primary}
+								color={colors.text.primary}
 							>
 								{'Войти'}
 							</Anchor>
