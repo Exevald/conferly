@@ -13,7 +13,7 @@ import {ViewModeToggleButton} from './ViewModeToggleButton'
 const SHOW_GRID_THRESHOLD = 3
 const SHOW_LIST_THRESHOLD = 6
 
-type ViewMode = 'grid' | 'list' | 'rows'
+type ViewMode = 'rows' | 'grid' | 'list'
 
 type ViewModeToggleProps = {
 	viewMode: ViewMode,
@@ -42,20 +42,20 @@ function ViewModeToggle({
 	return (
 		<Group gap="xs">
 			<ViewModeToggleButton
+				mode="rows"
+				currentViewMode={viewMode}
+				icon={<IconLayoutRows size={16} />}
+				label="Столбец"
+				onClick={() => handleModeChange('rows')}
+				isPending={isPending}
+			/>
+			<ViewModeToggleButton
 				mode="grid"
 				currentViewMode={viewMode}
 				icon={<IconGrid3x3 size={16} />}
 				label="Сетка"
 				onClick={() => handleModeChange('grid')}
 				disabled={!canShowGrid}
-				isPending={isPending}
-			/>
-			<ViewModeToggleButton
-				mode="rows"
-				currentViewMode={viewMode}
-				icon={<IconLayoutRows size={16} />}
-				label="Столбец"
-				onClick={() => handleModeChange('rows')}
 				isPending={isPending}
 			/>
 			<ViewModeToggleButton

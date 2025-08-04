@@ -21,16 +21,16 @@ type HomePageProps = {
 
 function HomePage({searchParams}: HomePageProps) {
 	const allEvents = mockEvents
-	const viewMode = (searchParams.view as ViewMode) || 'grid'
+	const viewMode = (searchParams.view as ViewMode) || 'rows'
 
 	const renderEvents = (events: typeof allEvents, mode: ViewMode) => {
 		switch (mode) {
 			case 'list':
 				return <EventList events={events} />
-			case 'rows':
-				return <EventColumn events={events} />
-			default:
+			case 'grid':
 				return <EventGrid events={events} />
+			default:
+				return <EventColumn events={events} />
 		}
 	}
 
