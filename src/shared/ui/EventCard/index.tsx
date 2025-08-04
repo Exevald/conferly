@@ -1,22 +1,16 @@
 'use client'
 
 import {
-	Badge,
 	Card,
-	Group,
 	Image,
 	Stack,
-	Text,
-	Title,
 } from '@mantine/core'
-import {IconCalendar, IconMapPin} from '@tabler/icons-react'
 import Link from 'next/link'
-import {
-	type Event,
-	getTypeColor,
-	getTypeLabel,
-} from '@/entities/Event'
-import {colors} from '@/shared/ui/design-system'
+import {EventCardBadges} from './EventCardBadges'
+import {EventCardDescription} from './EventCardDescription'
+import {EventCardHeader} from './EventCardHeader'
+import {EventCardMeta} from './EventCardMeta'
+import {type Event} from '@/entities/Event'
 
 type EventCardProps = {
 	event: Event,
@@ -60,71 +54,10 @@ function EventCard({
 				gap="sm"
 				mt="md"
 			>
-				<Group
-					justify="space-between"
-					align="center"
-				>
-					<Title
-						order={3}
-						size="h4"
-						lineClamp={2}
-						c={colors.text.primary}
-					>
-						{event.name}
-					</Title>
-					{event.isUpcoming && (
-						<Badge
-							color="red"
-							variant="light"
-							size="sm"
-						>
-							{'Скоро\r'}
-						</Badge>
-					)}
-				</Group>
-				<Text
-					size="sm"
-					c={colors.text.secondary}
-					lineClamp={2}
-				>
-					{event.description}
-				</Text>
-				<Group
-					gap="xs"
-					wrap="wrap"
-				>
-					<Badge
-						color={getTypeColor(event.type)}
-						variant="light"
-						size="sm"
-					>
-						{getTypeLabel(event.type)}
-					</Badge>
-					<Badge
-						color="gray"
-						variant="light"
-						size="sm"
-					>
-						{event.attendees} {'участников\r'}
-					</Badge>
-				</Group>
-				<Group
-					gap="xs"
-					c={colors.text.secondary}
-				>
-					<Group gap="xs">
-						<IconCalendar size={16} />
-						<Text size="sm">
-							{event.date}
-						</Text>
-					</Group>
-					<Group gap="xs">
-						<IconMapPin size={16} />
-						<Text size="sm">
-							{event.location}
-						</Text>
-					</Group>
-				</Group>
+				<EventCardHeader event={event} />
+				<EventCardDescription event={event} />
+				<EventCardBadges event={event} />
+				<EventCardMeta event={event} />
 			</Stack>
 		</Card>
 	)
