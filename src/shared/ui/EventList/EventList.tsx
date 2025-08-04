@@ -28,8 +28,10 @@ function EventListItem({
 			}}
 			className={styles.eventListItem}
 		>
-			<EventHeader event={event} />
-			<EventMeta event={event} />
+			<Stack gap="md">
+				<EventHeader event={event} />
+				<EventMeta event={event} />
+			</Stack>
 		</Card>
 	)
 }

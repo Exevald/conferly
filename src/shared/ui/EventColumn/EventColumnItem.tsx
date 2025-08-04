@@ -38,7 +38,10 @@ function EventColumnItem({
 					fallbackSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=240&fit=crop"
 				/>
 			</div>
-			<Stack gap="md">
+			<Stack
+				gap="md"
+				pt="md"
+			>
 				<EventColumnItemHeader event={event} />
 				<EventColumnItemDescription event={event} />
 				<EventColumnItemBadges event={event} />

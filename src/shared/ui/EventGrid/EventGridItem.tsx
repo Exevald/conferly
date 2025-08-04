@@ -38,7 +38,10 @@ function EventGridItem({
 					fallbackSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=160&fit=crop"
 				/>
 			</div>
-			<Stack gap="sm">
+			<Stack
+				gap="sm"
+				pt="sm"
+			>
 				<EventGridItemHeader event={event} />
 				<EventGridItemDescription event={event} />
 				<EventGridItemBadges event={event} />
