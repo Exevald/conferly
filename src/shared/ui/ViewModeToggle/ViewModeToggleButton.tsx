@@ -1,7 +1,7 @@
-import {Button, Tooltip} from '@mantine/core'
 import {type ReactNode} from 'react'
 import styles from './ViewModeToggle.module.css'
-import {colors} from '@/shared/ui/design-system'
+import {Button} from '@/shared/ui/Button/Button'
+import {Tooltip} from '@/shared/ui/Tooltip/Tooltip'
 
 type ViewModeToggleButtonProps = {
 	mode: string,
@@ -26,19 +26,17 @@ function ViewModeToggleButton({
 
 	return (
 		<Tooltip
-			label={label}
-			disabled={disabled}
+			content={label}
+			position="bottom"
+			disabled={!disabled}
 		>
 			<Button
 				variant={isActive
-					? 'filled'
-					: 'subtle'}
+					? 'primary'
+					: 'secondary'}
 				size="sm"
 				onClick={onClick}
 				disabled={disabled || isPending}
-				bg={isActive
-					? colors.primary
-					: undefined}
 				className={styles.toggleButton}
 			>
 				{isPending && isActive
