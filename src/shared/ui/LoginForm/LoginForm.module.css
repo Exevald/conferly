@@ -1,0 +1,23 @@
+.container {
+  min-height: 100%;
+  padding: 20px;
+  flex: 1;
+}
+
+.paper {
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

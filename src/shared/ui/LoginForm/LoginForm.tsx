@@ -1,7 +1,7 @@
 import {
 	Anchor,
 	Button,
-	Container,
+	Center,
 	Paper,
 	PasswordInput,
 	Stack,
@@ -10,44 +10,29 @@ import {
 	Title,
 } from '@mantine/core'
 import Link from 'next/link'
+import styles from './LoginForm.module.css'
+import {colors} from '@/shared/ui/design-system'
 
-function RegisterPage() {
+function LoginForm() {
 	return (
-		<Container
-			py="xl"
-			style={{
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				minHeight: '100%',
-				flex: 1,
-			}}
-		>
+		<Center className={styles.container}>
 			<Paper
 				shadow="md"
 				p="xl"
 				radius="md"
 				withBorder={true}
-				style={{
-					width: '100%',
-					maxWidth: '400px',
-				}}
+				className={styles.paper}
 			>
 				<Title
 					order={2}
 					ta="center"
 					mb="lg"
-					c="#323537"
+					c={colors.text.primary}
 				>
-					{'Регистрация'}
+					{'Вход в систему'}
 				</Title>
 				<form>
 					<Stack gap="md">
-						<TextInput
-							label="Имя"
-							placeholder="Ваше имя"
-							required={true}
-						/>
 						<TextInput
 							label="Email"
 							placeholder="example@email.com"
@@ -59,39 +44,36 @@ function RegisterPage() {
 							placeholder="Введите пароль"
 							required={true}
 						/>
-						<PasswordInput
-							label="Подтвердите пароль"
-							placeholder="Повторите пароль"
-							required={true}
-						/>
 						<Button
 							type="submit"
 							fullWidth={true}
 							size="md"
-							bg="orange.6"
+							bg={colors.primary}
 						>
-							{'Зарегистрироваться'}
+							{'Войти'}
 						</Button>
 						<Text
 							ta="center"
 							size="sm"
-							c="dimmed"
+							c={colors.text.secondary}
 						>
-							{'Уже есть аккаунт?'}
+							{'Нет аккаунта?'}
 							{' '}
 							<Anchor
 								component={Link}
-								href="/auth"
-								c="#323537"
+								href="/auth?mode=register"
+								c={colors.text.primary}
 							>
-								{'Войти'}
+								{'Зарегистрироваться'}
 							</Anchor>
 						</Text>
 					</Stack>
 				</form>
 			</Paper>
-		</Container>
+		</Center>
 	)
 }
 
-export default RegisterPage
+export {
+	LoginForm,
+}

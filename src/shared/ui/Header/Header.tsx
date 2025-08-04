@@ -51,7 +51,7 @@ function Header() {
 						</Button>
 						<Button
 							component={Link}
-							href="/auth/register"
+							href="/auth?mode=register"
 							variant="filled"
 							size="sm"
 							bg={colors.primary}
