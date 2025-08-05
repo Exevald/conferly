@@ -48,6 +48,14 @@
   border-radius: var(--radius-2xl);
 }
 
+.card--radius-3xl {
+  border-radius: var(--radius-3xl);
+}
+
+.card--radius-4xl {
+  border-radius: var(--radius-4xl);
+}
+
 .card--withBorder {
   border: 1px solid var(--color-border-light);
 }
@@ -72,7 +80,32 @@
   box-shadow: var(--shadow-xl);
 }
 
-.card:hover {
+.card--shadow-xs:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.card--shadow-sm:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.card--shadow-md:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+}
+
+.card--shadow-lg:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.card--shadow-xl:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.card:hover:not([class*="card--shadow-"]) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-xs);
 } 

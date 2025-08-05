@@ -3,7 +3,7 @@ import {type ReactNode} from 'react'
 import styles from './Card.module.css'
 
 type CardPadding = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-type CardRadius = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+type CardRadius = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl'
 
 type CardProps = {
 	children: ReactNode,
@@ -19,9 +19,9 @@ type CardProps = {
 function Card({
 	children,
 	padding = 'md',
-	radius = 'md',
-	withBorder = false,
-	shadow,
+	radius = 'lg',
+	withBorder = true,
+	shadow = 'sm',
 	className = '',
 	href,
 	style,

@@ -47,6 +47,14 @@
   border-radius: var(--radius-2xl);
 }
 
+.paper--radius-3xl {
+  border-radius: var(--radius-3xl);
+}
+
+.paper--radius-4xl {
+  border-radius: var(--radius-4xl);
+}
+
 .paper--withBorder {
   border: 1px solid var(--color-border-light);
 }
