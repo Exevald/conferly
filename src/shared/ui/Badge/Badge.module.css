@@ -16,28 +16,24 @@
 .badge--xs {
   padding: 2px 6px;
   font-size: 10px;
-  min-height: 16px;
   border-radius: var(--radius-sm);
 }
 
 .badge--sm {
   padding: 4px 8px;
   font-size: 12px;
-  min-height: 20px;
   border-radius: var(--radius-md);
 }
 
 .badge--md {
   padding: 6px 10px;
   font-size: 14px;
-  min-height: 24px;
   border-radius: var(--radius-lg);
 }
 
 .badge--lg {
   padding: 8px 12px;
   font-size: 16px;
-  min-height: 28px;
   border-radius: var(--radius-xl);
 }
 
