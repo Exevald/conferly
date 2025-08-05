@@ -3,53 +3,74 @@
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 4px;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--transition-normal);
   line-height: 1;
   white-space: nowrap;
   user-select: none;
+  position: relative;
+  overflow: hidden;
 }
 
 .button--sm {
   padding: 6px 12px;
   font-size: 12px;
   min-height: 28px;
+  border-radius: var(--radius-sm);
 }
 
 .button--md {
   padding: 8px 16px;
   font-size: 14px;
   min-height: 36px;
+  border-radius: var(--radius-md);
 }
 
 .button--lg {
   padding: 12px 20px;
   font-size: 16px;
   min-height: 44px;
+  border-radius: var(--radius-lg);
 }
 
 .button--primary {
   background-color: var(--color-primary);
   color: white;
   border: 1px solid var(--color-primary);
+  box-shadow: var(--shadow-sm);
 }
 
 .button--primary:hover:not(:disabled) {
   background-color: var(--color-primary-hover);
   border-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.button--primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
 .button--secondary {
   background-color: transparent;
   color: var(--color-secondary);
   border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-xs);
 }
 
 .button--secondary:hover:not(:disabled) {
   background-color: var(--color-background-secondary);
+  border-color: var(--color-border-dark);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.button--secondary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--shadow-xs);
 }
 
 .button--subtle {
@@ -60,11 +81,19 @@
 
 .button--subtle:hover:not(:disabled) {
   background-color: var(--color-background-secondary);
+  border-color: var(--color-border-light);
+  transform: translateY(-1px);
+}
+
+.button--subtle:active:not(:disabled) {
+  transform: translateY(0);
 }
 
 .button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .button--fullWidth {
@@ -75,6 +104,11 @@
   width: 16px;
   height: 16px;
   stroke: currentColor;
+  transition: transform var(--transition-fast);
+}
+
+.button:hover svg {
+  transform: scale(1.05);
 }
 
 .button--sm svg {

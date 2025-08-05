@@ -1,7 +1,7 @@
 .card {
   background-color: var(--color-background-primary);
-  border-radius: 8px;
-  transition: all 0.2s ease;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
 }
 
 .card--padding-xs {
@@ -25,23 +25,27 @@
 }
 
 .card--radius-xs {
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
 }
 
 .card--radius-sm {
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
 }
 
 .card--radius-md {
-  border-radius: 8px;
+  border-radius: var(--radius-md);
 }
 
 .card--radius-lg {
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
 }
 
 .card--radius-xl {
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
+}
+
+.card--radius-2xl {
+  border-radius: var(--radius-2xl);
 }
 
 .card--withBorder {
@@ -49,26 +53,26 @@
 }
 
 .card--shadow-xs {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: var(--shadow-xs);
 }
 
 .card--shadow-sm {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: var(--shadow-sm);
 }
 
 .card--shadow-md {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: var(--shadow-md);
 }
 
 .card--shadow-lg {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: var(--shadow-lg);
 }
 
 .card--shadow-xl {
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: var(--shadow-xl);
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: var(--shadow-lg);
 } 
