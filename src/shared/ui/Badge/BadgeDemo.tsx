@@ -16,10 +16,10 @@ function BadgeDemo() {
 			</Group>
 			<Title order={2}>{'Badge - Размеры'}</Title>
 			<Group>
-				<Badge size="xs">{'XS'}</Badge>
-				<Badge size="sm">{'SM'}</Badge>
-				<Badge size="md">{'MD'}</Badge>
-				<Badge size="lg">{'LG'}</Badge>
+				<Badge size="xs">{'xsmall'}</Badge>
+				<Badge size="sm">{'small'}</Badge>
+				<Badge size="md">{'medium'}</Badge>
+				<Badge size="lg">{'large large'}</Badge>
 			</Group>
 		</Stack>
 	)

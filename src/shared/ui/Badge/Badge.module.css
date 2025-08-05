@@ -16,25 +16,29 @@
 .badge--xs {
   padding: 2px 6px;
   font-size: 10px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
+  height: 16px;
 }
 
 .badge--sm {
   padding: 4px 8px;
   font-size: 12px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
+  height: 20px;
 }
 
 .badge--md {
   padding: 6px 10px;
   font-size: 14px;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
+  height: 24px;
 }
 
 .badge--lg {
   padding: 8px 12px;
   font-size: 16px;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-2xl);
+  height: 28px;
 }
 
 .badge--gray {
