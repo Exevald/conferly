@@ -6,7 +6,7 @@ import {Title} from '@/shared/ui/Title/Title'
 function BadgeDemo() {
 	return (
 		<Stack gap="lg">
-			<Title order={2}>{'Badge - Цвета'}</Title>
+			<Title order={4}>{'Цвета'}</Title>
 			<Group>
 				<Badge color="gray">{'Gray'}</Badge>
 				<Badge color="red">{'Red'}</Badge>
@@ -14,7 +14,7 @@ function BadgeDemo() {
 				<Badge color="green">{'Green'}</Badge>
 				<Badge color="orange">{'Orange'}</Badge>
 			</Group>
-			<Title order={2}>{'Badge - Размеры'}</Title>
+			<Title order={4}>{'Размеры'}</Title>
 			<Group>
 				<Badge size="xs">{'xsmall'}</Badge>
 				<Badge size="sm">{'small'}</Badge>

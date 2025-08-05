@@ -6,23 +6,23 @@ import {Title} from '@/shared/ui/Title/Title'
 function CardDemo() {
 	return (
 		<Stack gap="lg">
-			<Title order={2}>{'Card - Базовый (с границами)'}</Title>
+			<Title order={4}>{'Базовый (с границами)'}</Title>
 			<Card>
 				<Text>{'Это базовая карточка с содержимым'}</Text>
 			</Card>
-			<Title order={2}>{'Card - Без границ'}</Title>
+			<Title order={4}>{'Без границ'}</Title>
 			<Card
 				withBorder={false}
 				shadow={undefined}
 			>
 				<Text>{'Карточка без границ и теней'}</Text>
 			</Card>
-			<Title order={2}>{'Card - С заголовком'}</Title>
+			<Title order={4}>{'С заголовком'}</Title>
 			<Card>
 				<Title order={3}>{'Заголовок карточки'}</Title>
 				<Text>{'Содержимое карточки с заголовком'}</Text>
 			</Card>
-			<Title order={2}>{'Card - Разные тени'}</Title>
+			<Title order={4}>{'Разные тени'}</Title>
 			<Stack gap="md">
 				<Card shadow="xs">
 					<Text>{'Карточка с легкой тенью'}</Text>
@@ -34,7 +34,7 @@ function CardDemo() {
 					<Text>{'Карточка с сильной тенью'}</Text>
 				</Card>
 			</Stack>
-			<Title order={2}>{'Card - Разные закругления'}</Title>
+			<Title order={4}>{'Разные закругления'}</Title>
 			<Stack gap="md">
 				<Card radius="xs">
 					<Text>{'Маленькие закругления'}</Text>

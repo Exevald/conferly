@@ -5,7 +5,7 @@ import {Title} from '@/shared/ui/Title/Title'
 function TextDemo() {
 	return (
 		<Stack gap="lg">
-			<Title order={2}>{'Text - Размеры'}</Title>
+			<Title order={4}>{'Размеры'}</Title>
 			<Stack gap="sm">
 				<Text size="xs">{'Extra Small Text'}</Text>
 				<Text size="sm">{'Small Text'}</Text>
@@ -13,7 +13,7 @@ function TextDemo() {
 				<Text size="lg">{'Large Text'}</Text>
 				<Text size="xl">{'Extra Large Text'}</Text>
 			</Stack>
-			<Title order={2}>{'Text - Цвета'}</Title>
+			<Title order={4}>{'Цвета'}</Title>
 			<Stack gap="sm">
 				<Text color="primary">{'Primary Text'}</Text>
 				<Text color="secondary">{'Secondary Text'}</Text>

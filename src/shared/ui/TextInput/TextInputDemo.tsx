@@ -5,20 +5,20 @@ import {Title} from '@/shared/ui/Title/Title'
 function TextInputDemo() {
 	return (
 		<Stack gap="lg">
-			<Title order={2}>{'TextInput - Базовый'}</Title>
+			<Title order={4}>{'Базовый'}</Title>
 			<TextInput placeholder="Введите текст" />
-			<Title order={2}>{'TextInput - С лейблом'}</Title>
+			<Title order={4}>{'С лейблом'}</Title>
 			<TextInput
 				label="Имя пользователя"
 				placeholder="Введите имя"
 			/>
-			<Title order={2}>{'TextInput - С ошибкой'}</Title>
+			<Title order={4}>{'С ошибкой'}</Title>
 			<TextInput
 				label="Email"
 				placeholder="Введите email"
 				error="Неверный формат email"
 			/>
-			<Title order={2}>{'TextInput - Размеры'}</Title>
+			<Title order={4}>{'Размеры'}</Title>
 			<Stack gap="sm">
 				<TextInput
 					size="xs"

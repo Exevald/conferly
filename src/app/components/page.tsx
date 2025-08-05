@@ -11,6 +11,7 @@ import {Title} from '@/shared/ui/Title/Title'
 function ComponentsPage() {
 	// TODO: Сделать переключение по query params
 	const [selectedComponent, setSelectedComponent] = useState('button')
+	const name = components.find(component => component.id === selectedComponent)?.name
 
 	return (
 		<>
@@ -24,8 +25,8 @@ function ComponentsPage() {
 				py="md"
 			>
 				<Stack gap="lg">
-					<Title order={1}>
-						{'Демонстрация компонентов'}
+					<Title order={3}>
+						{name}
 					</Title>
 					<ComponentDemo componentId={selectedComponent} />
 				</Stack>

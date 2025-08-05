@@ -6,7 +6,7 @@ import {Title} from '@/shared/ui/Title/Title'
 function ButtonDemo() {
 	return (
 		<Stack gap="lg">
-			<Title order={2}>{'Button - Размеры'}</Title>
+			<Title order={4}>{'Размеры'}</Title>
 			<Group>
 				<Button
 					size="sm"
@@ -27,13 +27,13 @@ function ButtonDemo() {
 					{'Large Primary'}
 				</Button>
 			</Group>
-			<Title order={2}>{'Button - Варианты'}</Title>
+			<Title order={4}>{'Варианты'}</Title>
 			<Group>
 				<Button variant="primary">{'Primary'}</Button>
 				<Button variant="secondary">{'Secondary'}</Button>
 				<Button variant="subtle">{'Subtle'}</Button>
 			</Group>
-			<Title order={2}>{'Button - Состояния'}</Title>
+			<Title order={4}>{'Состояния'}</Title>
 			<Group>
 				<Button variant="primary">{'Normal'}</Button>
 				<Button
@@ -43,7 +43,7 @@ function ButtonDemo() {
 					{'Disabled'}
 				</Button>
 			</Group>
-			<Title order={2}>{'Button - Полная ширина'}</Title>
+			<Title order={4}>{'Полная ширина'}</Title>
 			<Button
 				variant="primary"
 				fullWidth={true}
