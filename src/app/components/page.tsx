@@ -23,6 +23,7 @@ function ComponentsPage() {
 			<Box
 				px="lg"
 				py="md"
+				style={{flex: '1'}}
 			>
 				<Stack gap="lg">
 					<Title order={3}>
