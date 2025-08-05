@@ -1,0 +1,14 @@
+.sidebar {
+	width: 280px;
+	border-right: 1px solid #e9ecef;
+	overflow-y: auto;
+	position: sticky;
+	top: 0;
+	height: 100vh;
+}
+
+.sidebar-button--selected {
+	justify-content: flex-start;
+	text-align: left;
+	width: 100%;
+} 
