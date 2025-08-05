@@ -1,4 +1,5 @@
 @import './fonts.css';
+@import './general.css';
 
 :root {
   --color-primary: #FA5D20;
