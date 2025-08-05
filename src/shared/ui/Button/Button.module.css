@@ -15,23 +15,23 @@
 }
 
 .button--sm {
-  padding: 6px 12px;
+  padding: 0 12px;
   font-size: 12px;
-  min-height: 28px;
+  height: 28px;
   border-radius: var(--radius-sm);
 }
 
 .button--md {
-  padding: 8px 16px;
+  padding: 0 16px;
   font-size: 14px;
-  min-height: 36px;
+  height: 36px;
   border-radius: var(--radius-md);
 }
 
 .button--lg {
-  padding: 12px 20px;
+  padding: 0 20px;
   font-size: 16px;
-  min-height: 44px;
+  height: 44px;
   border-radius: var(--radius-lg);
 }
 
