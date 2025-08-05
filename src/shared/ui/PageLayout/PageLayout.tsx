@@ -9,7 +9,7 @@ function PageLayout({children}: PageLayoutProps) {
 	return (
 		<main
 			style={{
-				minHeight: `calc(100vh - ${LAYOUT_CONSTANTS.HEADER_HEIGHT})`,
+				height: `calc(100vh - ${LAYOUT_CONSTANTS.HEADER_HEIGHT})`,
 				display: 'flex',
 			}}
 		>

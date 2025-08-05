@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import {LAYOUT_CONSTANTS} from '../constants'
 import {Box} from '@/shared/ui/Box/Box'
 import {Button} from '@/shared/ui/Button/Button'
 import {Container} from '@/shared/ui/Container/Container'
@@ -10,11 +11,13 @@ function Header() {
 	return (
 		<Box
 			component="header"
-			py="sm"
 			bg={colors.background.primary}
 			c={colors.text.primary}
 			style={{
 				borderBottom: `1px solid ${colors.border.light}`,
+				height: LAYOUT_CONSTANTS.HEADER_HEIGHT,
+				display: 'flex',
+				alignItems: 'center',
 			}}
 		>
 			<Container size="lg">
