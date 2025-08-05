@@ -38,6 +38,13 @@ function TooltipDemo() {
 					<Button>{'Right'}</Button>
 				</Tooltip>
 			</Group>
+			<Title order={2}>{'Tooltip - Длинный текст'}</Title>
+			<Tooltip
+				content="Это очень длинная подсказка, которая должна переноситься на новую строку, если текст не помещается в одну строку"
+				multiline={true}
+			>
+				<Button>{'Длинный tooltip'}</Button>
+			</Tooltip>
 		</Stack>
 	)
 }

@@ -1,6 +1,7 @@
 .tooltip {
   position: relative;
-  display: inline-block;
+  display: inline;
+  align-self: flex-start;
 }
 
 .tooltipContent {
@@ -11,13 +12,21 @@
   border-radius: var(--radius-md);
   font-size: 12px;
   font-weight: 500;
-  white-space: nowrap;
   z-index: 1000;
   box-shadow: var(--shadow-lg);
   opacity: 0;
   transform: scale(0.8);
   transition: all var(--transition-normal);
   pointer-events: none;
+  width: fit-content;
+  max-width: 200px;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.tooltipContent--multiline {
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .tooltipContent::before {

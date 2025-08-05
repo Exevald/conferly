@@ -10,6 +10,7 @@ type TooltipProps = {
 	disabled?: boolean,
 	delay?: number,
 	className?: string,
+	multiline?: boolean,
 }
 
 function Tooltip({
@@ -19,6 +20,7 @@ function Tooltip({
 	disabled = false,
 	delay = 200,
 	className = '',
+	multiline = false,
 }: TooltipProps) {
 	const [isVisible, setIsVisible] = useState(false)
 	const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null)
@@ -42,6 +44,12 @@ function Tooltip({
 		setIsVisible(false)
 	}
 
+	const tooltipContentClasses = [
+		styles.tooltipContent,
+		styles[`tooltip--${position}`],
+		multiline && styles['tooltipContent--multiline'],
+	].filter(Boolean).join(' ')
+
 	return (
 		<div
 			className={`${styles.tooltip} ${className}`}
@@ -50,7 +58,7 @@ function Tooltip({
 		>
 			{children}
 			{isVisible && (
-				<div className={`${styles.tooltipContent} ${styles[`tooltip--${position}`]}`}>
+				<div className={tooltipContentClasses}>
 					{content}
 				</div>
 			)}
