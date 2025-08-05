@@ -20,7 +20,7 @@ function EventGridItem({
 			href={`/events/${event.id}`}
 			shadow="sm"
 			padding="lg"
-			radius="md"
+			radius="lg"
 			withBorder={true}
 			className={styles.eventGridItem}
 		>

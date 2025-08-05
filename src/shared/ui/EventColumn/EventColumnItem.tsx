@@ -18,9 +18,9 @@ function EventColumnItem({
 	return (
 		<Card
 			href={`/events/${event.id}`}
-			shadow="sm"
+			shadow="lg"
 			padding="lg"
-			radius="md"
+			radius="lg"
 			withBorder={true}
 			className={styles.eventColumnItem}
 		>

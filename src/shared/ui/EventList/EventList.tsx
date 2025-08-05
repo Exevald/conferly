@@ -18,7 +18,7 @@ function EventListItem({
 			href={`/events/${event.id}`}
 			shadow="sm"
 			padding="md"
-			radius="md"
+			radius="lg"
 			withBorder={true}
 			className={styles.eventListItem}
 		>
