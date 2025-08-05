@@ -10,7 +10,7 @@ function Header() {
 	return (
 		<Box
 			component="header"
-			py="md"
+			py="sm"
 			bg={colors.background.primary}
 			c={colors.text.primary}
 			style={{
