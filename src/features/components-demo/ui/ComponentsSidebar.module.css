@@ -6,9 +6,3 @@
 	top: 0;
 	height: 100vh;
 }
-
-.sidebar-button--selected {
-	justify-content: flex-start;
-	text-align: left;
-	width: 100%;
-} 

@@ -25,23 +25,21 @@ function ComponentsSidebar({
 			py="md"
 			className={styles.sidebar}
 		>
-			<Title order={3}>{'Компоненты'}</Title>
-			<Stack gap="xs">
-				{components.map(component => (
-					<Button
-						key={component.id}
-						variant={selectedComponent === component.id
-							? 'primary'
-							: 'subtle'}
-						size="sm"
-						onClick={() => onComponentSelect(component.id)}
-						className={selectedComponent === component.id
-							? styles['sidebar-button--selected']
-							: ''}
-					>
-						{component.name}
-					</Button>
-				))}
+			<Stack gap="md">
+				<Title order={3}>{'Компоненты'}</Title>
+				<Stack gap="xs">
+					{components.map(component => (
+						<Button
+							key={component.id}
+							variant="subtle"
+							size="sm"
+							disabled={selectedComponent === component.id}
+							onClick={() => onComponentSelect(component.id)}
+						>
+							{component.name}
+						</Button>
+					))}
+				</Stack>
 			</Stack>
 		</Box>
 	)
