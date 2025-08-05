@@ -31,7 +31,6 @@ function Header() {
 					>
 						<Title
 							order={1}
-							size="h3"
 							color="primary"
 						>
 							{'Conferly'}

@@ -2,13 +2,11 @@ import {type ReactNode} from 'react'
 import styles from './Title.module.css'
 
 type TitleOrder = 1 | 2 | 3 | 4 | 5 | 6
-type TitleSize = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 type TitleColor = 'primary' | 'secondary' | 'muted' | 'inherit'
 
 type TitleProps = {
 	children: ReactNode,
 	order?: TitleOrder,
-	size?: TitleSize,
 	color?: TitleColor,
 	align?: 'left' | 'center' | 'right',
 	maxWidth?: number | string,
@@ -20,7 +18,6 @@ type TitleProps = {
 function Title({
 	children,
 	order = 1,
-	size = 'h1',
 	color = 'primary',
 	align = 'left',
 	maxWidth,
@@ -28,6 +25,8 @@ function Title({
 	className = '',
 	lineClamp,
 }: TitleProps) {
+	const size = `h${order}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+
 	const titleClasses = [
 		styles.title,
 		styles[`title--${size}`],
@@ -62,6 +61,5 @@ export {
 	Title,
 	type TitleProps,
 	type TitleOrder,
-	type TitleSize,
 	type TitleColor,
 }

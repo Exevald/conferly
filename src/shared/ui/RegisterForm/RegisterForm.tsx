@@ -23,7 +23,6 @@ function RegisterForm() {
 			>
 				<Title
 					order={2}
-					size="h3"
 					color="primary"
 					align="center"
 					margin="0 0 16px 0"
