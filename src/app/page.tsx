@@ -46,7 +46,6 @@ async function HomePage({searchParams}: HomePageProps) {
 				>
 					<Title
 						order={1}
-						size="h2"
 						color="primary"
 						align="center"
 					>
@@ -71,12 +70,14 @@ async function HomePage({searchParams}: HomePageProps) {
 							>
 								<Title
 									order={2}
-									size="h3"
 									color="primary"
 								>
 									{'Ближайшие мероприятия\r'}
 								</Title>
-								<Group gap="md">
+								<Group
+									gap="md"
+									align="center"
+								>
 									<Badge
 										color="gray"
 										size="lg"
