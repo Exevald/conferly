@@ -1,7 +1,9 @@
 import {colors} from '../design-system/colors'
-import {Box} from '@/shared/ui/Box/Box'
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {Title} from '@/shared/ui/Title/Title'
+import {
+	Box,
+	Stack,
+	Title,
+} from '@/shared/ui'
 
 function StackDemo() {
 	const elemStyle = {

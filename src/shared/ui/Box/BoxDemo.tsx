@@ -1,8 +1,10 @@
 import {colors} from '../design-system/colors'
-import {Box} from '@/shared/ui/Box/Box'
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {Text} from '@/shared/ui/Text/Text'
-import {Title} from '@/shared/ui/Title/Title'
+import {
+	Box,
+	Stack,
+	Text,
+	Title,
+} from '@/shared/ui'
 
 function BoxDemo() {
 	const boxStyle = {

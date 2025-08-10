@@ -1,6 +1,8 @@
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {TextInput} from '@/shared/ui/TextInput/TextInput'
-import {Title} from '@/shared/ui/Title/Title'
+import {
+	Stack,
+	TextInput,
+	Title,
+} from '@/shared/ui'
 
 function TextInputDemo() {
 	return (

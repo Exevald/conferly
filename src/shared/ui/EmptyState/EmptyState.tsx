@@ -1,8 +1,10 @@
 import {IconInbox} from '@tabler/icons-react'
+import {
+	Stack,
+	Text,
+	Title,
+} from '@/shared/ui'
 import {colors} from '@/shared/ui/design-system'
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {Text} from '@/shared/ui/Text/Text'
-import {Title} from '@/shared/ui/Title/Title'
 
 type EmptyStateProps = {
 	title: string,
@@ -41,7 +43,6 @@ function EmptyState({
 			</div>
 			<Title
 				order={3}
-				size="h4"
 				color="primary"
 			>
 				{title}

@@ -3,8 +3,7 @@ import styles from './EventList.module.css'
 import {EventHeader} from './view/EventHeader'
 import {EventMeta} from './view/EventMeta'
 import {type Event} from '@/entities/Event'
-import {Card} from '@/shared/ui/Card/Card'
-import {Stack} from '@/shared/ui/Stack/Stack'
+import {Card, Stack} from '@/shared/ui'
 
 type EventListItemProps = {
 	event: Event,

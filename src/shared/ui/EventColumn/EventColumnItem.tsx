@@ -4,9 +4,11 @@ import {EventColumnItemDescription} from './view/EventColumnItemDescription'
 import {EventColumnItemHeader} from './view/EventColumnItemHeader'
 import {EventColumnItemMeta} from './view/EventColumnItemMeta'
 import {type Event} from '@/entities/Event'
-import {Card} from '@/shared/ui/Card/Card'
-import {Image} from '@/shared/ui/Image/Image'
-import {Stack} from '@/shared/ui/Stack/Stack'
+import {
+	Card,
+	Image,
+	Stack,
+} from '@/shared/ui'
 
 type EventColumnItemProps = {
 	event: Event,

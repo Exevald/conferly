@@ -1,6 +1,6 @@
 import {EventGridItem} from './EventGridItem'
 import {type Event} from '@/entities/Event'
-import {SimpleGrid} from '@/shared/ui/SimpleGrid/SimpleGrid'
+import {SimpleGrid} from '@/shared/ui'
 
 type EventGridProps = {
 	events: Event[],

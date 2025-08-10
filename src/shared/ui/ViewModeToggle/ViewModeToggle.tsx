@@ -3,7 +3,7 @@
 import {useRouter, useSearchParams} from 'next/navigation'
 import {useTransition} from 'react'
 import {ViewModeToggleButton} from './ViewModeToggleButton'
-import {Group} from '@/shared/ui/Group/Group'
+import {Group} from '@/shared/ui'
 import {
 	IconGrid,
 	IconList,

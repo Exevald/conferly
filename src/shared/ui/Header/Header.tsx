@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import {LAYOUT_CONSTANTS} from '../constants'
-import {Box} from '@/shared/ui/Box/Box'
-import {Button} from '@/shared/ui/Button/Button'
-import {Container} from '@/shared/ui/Container/Container'
+import {
+	Box,
+	Button,
+	Container,
+	Group,
+	Title,
+} from '@/shared/ui'
 import {colors} from '@/shared/ui/design-system'
-import {Group} from '@/shared/ui/Group/Group'
-import {Title} from '@/shared/ui/Title/Title'
 
 function Header() {
 	return (

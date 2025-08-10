@@ -1,7 +1,6 @@
 import {type Metadata} from 'next'
+import {Header, PageLayout} from '@/shared/ui'
 import '@/shared/ui/design-system/design-system.css'
-import Header from '@/shared/ui/Header/Header'
-import {PageLayout} from '@/shared/ui/PageLayout/PageLayout'
 
 const metadata: Metadata = {
 	title: 'Conferly',

@@ -3,8 +3,7 @@ import {
 	getTypeColor,
 	getTypeLabel,
 } from '@/entities/Event'
-import {Badge} from '@/shared/ui/Badge/Badge'
-import {Group} from '@/shared/ui/Group/Group'
+import {Badge, Group} from '@/shared/ui'
 
 
 type EventColumnItemBadgesProps = {

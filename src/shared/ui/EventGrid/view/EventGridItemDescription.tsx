@@ -1,5 +1,5 @@
 import {type Event} from '@/entities/Event'
-import {Text} from '@/shared/ui/Text/Text'
+import {Text} from '@/shared/ui'
 
 type EventGridItemDescriptionProps = {
 	event: Event,

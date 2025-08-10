@@ -1,7 +1,10 @@
-import {Badge} from '@/shared/ui/Badge/Badge'
-import {Group} from '@/shared/ui/Group/Group'
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {Title} from '@/shared/ui/Title/Title'
+import {
+	Badge,
+	Group,
+	Stack,
+	Title,
+} from '@/shared/ui'
+
 
 function BadgeDemo() {
 	return (

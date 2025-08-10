@@ -1,8 +1,7 @@
 'use client'
 
 import {useSearchParams} from 'next/navigation'
-import {LoginForm} from '@/shared/ui/LoginForm/LoginForm'
-import {RegisterForm} from '@/shared/ui/RegisterForm/RegisterForm'
+import {LoginForm, RegisterForm} from '@/shared/ui'
 
 function AuthPage() {
 	const searchParams = useSearchParams()

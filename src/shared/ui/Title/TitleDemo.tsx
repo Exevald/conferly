@@ -1,5 +1,4 @@
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {Title} from '@/shared/ui/Title/Title'
+import {Stack, Title} from '@/shared/ui'
 
 function TitleDemo() {
 	return (

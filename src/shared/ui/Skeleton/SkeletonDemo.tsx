@@ -1,6 +1,9 @@
-import {Skeleton} from '@/shared/ui/Skeleton/Skeleton'
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {Title} from '@/shared/ui/Title/Title'
+import {
+	Skeleton,
+	Stack,
+	Title,
+} from '@/shared/ui'
+
 
 function SkeletonDemo() {
 	return (

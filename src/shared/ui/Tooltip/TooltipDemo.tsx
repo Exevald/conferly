@@ -1,8 +1,10 @@
-import {Button} from '@/shared/ui/Button/Button'
-import {Group} from '@/shared/ui/Group/Group'
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {Title} from '@/shared/ui/Title/Title'
-import {Tooltip} from '@/shared/ui/Tooltip/Tooltip'
+import {
+	Button,
+	Group,
+	Stack,
+	Title,
+	Tooltip,
+} from '@/shared/ui'
 
 function TooltipDemo() {
 	return (

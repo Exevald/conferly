@@ -1,15 +1,17 @@
 import Link from 'next/link'
+import {colors} from '../design-system'
 import styles from './LoginForm.module.css'
-import {Anchor} from '@/shared/ui/Anchor/Anchor'
-import {Button} from '@/shared/ui/Button/Button'
-import {Center} from '@/shared/ui/Center/Center'
-import {colors} from '@/shared/ui/design-system'
-import {Paper} from '@/shared/ui/Paper/Paper'
-import {PasswordInput} from '@/shared/ui/PasswordInput/PasswordInput'
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {Text} from '@/shared/ui/Text/Text'
-import {TextInput} from '@/shared/ui/TextInput/TextInput'
-import {Title} from '@/shared/ui/Title/Title'
+import {
+	Anchor,
+	Button,
+	Center,
+	Paper,
+	PasswordInput,
+	Stack,
+	Text,
+	TextInput,
+	Title,
+} from '@/shared/ui'
 
 function LoginForm() {
 	return (

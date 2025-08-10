@@ -1,9 +1,11 @@
 import {type Component} from '../model/const'
 import styles from './ComponentsSidebar.module.css'
-import {Box} from '@/shared/ui/Box/Box'
-import {Button} from '@/shared/ui/Button/Button'
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {Title} from '@/shared/ui/Title/Title'
+import {
+	Box,
+	Button,
+	Stack,
+	Title,
+} from '@/shared/ui'
 
 type ComponentsSidebarProps = {
 	components: Component[],

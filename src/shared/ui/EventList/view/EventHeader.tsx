@@ -3,9 +3,11 @@ import {
 	getTypeColor,
 	getTypeLabel,
 } from '@/entities/Event'
-import {Badge} from '@/shared/ui/Badge/Badge'
-import {Group} from '@/shared/ui/Group/Group'
-import {Title} from '@/shared/ui/Title/Title'
+import {
+	Badge,
+	Group,
+	Title,
+} from '@/shared/ui'
 
 type EventHeaderProps = {
 	event: Event,
@@ -21,7 +23,6 @@ function EventHeader({
 		>
 			<Title
 				order={3}
-				size="h4"
 				color="primary"
 				lineClamp={2}
 			>

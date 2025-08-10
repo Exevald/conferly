@@ -1,7 +1,6 @@
 import {type Event} from '@/entities/Event'
-import {Group} from '@/shared/ui/Group/Group'
+import {Group, Text} from '@/shared/ui'
 import {IconCalendar, IconMapPin} from '@/shared/ui/Icons/Icons'
-import {Text} from '@/shared/ui/Text/Text'
 
 type EventColumnItemMetaProps = {
 	event: Event,

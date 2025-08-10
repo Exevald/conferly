@@ -3,10 +3,11 @@ import {
 	getTypeColor,
 	getTypeLabel,
 } from '@/entities/Event'
-import {Badge} from '@/shared/ui/Badge/Badge'
-import {Group} from '@/shared/ui/Group/Group'
-import {Title} from '@/shared/ui/Title/Title'
-
+import {
+	Badge,
+	Group,
+	Title,
+} from '@/shared/ui'
 
 type EventGridItemHeaderProps = {
 	event: Event,
@@ -22,7 +23,6 @@ function EventGridItemHeader({
 		>
 			<Title
 				order={3}
-				size="h5"
 				color="primary"
 				lineClamp={2}
 			>

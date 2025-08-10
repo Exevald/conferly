@@ -1,7 +1,6 @@
 import {type ReactNode} from 'react'
 import styles from './ViewModeToggle.module.css'
-import {Button} from '@/shared/ui/Button/Button'
-import {Tooltip} from '@/shared/ui/Tooltip/Tooltip'
+import {Button, Tooltip} from '@/shared/ui'
 
 type ViewModeToggleButtonProps = {
 	mode: string,

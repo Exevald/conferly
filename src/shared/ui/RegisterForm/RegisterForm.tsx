@@ -1,15 +1,17 @@
 import Link from 'next/link'
 import styles from './RegisterForm.module.css'
-import {Anchor} from '@/shared/ui/Anchor/Anchor'
-import {Button} from '@/shared/ui/Button/Button'
-import {Center} from '@/shared/ui/Center/Center'
+import {
+	Anchor,
+	Button,
+	Center,
+	Paper,
+	PasswordInput,
+	Stack,
+	Text,
+	TextInput,
+	Title,
+} from '@/shared/ui'
 import {colors} from '@/shared/ui/design-system'
-import {Paper} from '@/shared/ui/Paper/Paper'
-import {PasswordInput} from '@/shared/ui/PasswordInput/PasswordInput'
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {Text} from '@/shared/ui/Text/Text'
-import {TextInput} from '@/shared/ui/TextInput/TextInput'
-import {Title} from '@/shared/ui/Title/Title'
 
 function RegisterForm() {
 	return (

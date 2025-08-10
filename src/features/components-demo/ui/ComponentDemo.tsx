@@ -1,18 +1,20 @@
-import {BadgeDemo} from '@/shared/ui/Badge/BadgeDemo'
-import {BoxDemo} from '@/shared/ui/Box/BoxDemo'
-import {ButtonDemo} from '@/shared/ui/Button/ButtonDemo'
-import {CardDemo} from '@/shared/ui/Card/CardDemo'
-import {ContainerDemo} from '@/shared/ui/Container/ContainerDemo'
-import {GroupDemo} from '@/shared/ui/Group/GroupDemo'
-import {SkeletonDemo} from '@/shared/ui/Skeleton/SkeletonDemo'
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {StackDemo} from '@/shared/ui/Stack/StackDemo'
-import {Text} from '@/shared/ui/Text/Text'
-import {TextDemo} from '@/shared/ui/Text/TextDemo'
-import {TextInputDemo} from '@/shared/ui/TextInput/TextInputDemo'
-import {Title} from '@/shared/ui/Title/Title'
-import {TitleDemo} from '@/shared/ui/Title/TitleDemo'
-import {TooltipDemo} from '@/shared/ui/Tooltip/TooltipDemo'
+import {
+	BadgeDemo,
+	BoxDemo,
+	ButtonDemo,
+	CardDemo,
+	ContainerDemo,
+	GroupDemo,
+	SkeletonDemo,
+	Stack,
+	StackDemo,
+	Text,
+	TextDemo,
+	TextInputDemo,
+	Title,
+	TitleDemo,
+	TooltipDemo,
+} from '@/shared/ui'
 
 type ComponentDemoProps = {
 	componentId: string,

@@ -1,7 +1,9 @@
-import {Card} from '@/shared/ui/Card/Card'
-import {Stack} from '@/shared/ui/Stack/Stack'
-import {Text} from '@/shared/ui/Text/Text'
-import {Title} from '@/shared/ui/Title/Title'
+import {
+	Card,
+	Stack,
+	Text,
+	Title,
+} from '@/shared/ui'
 
 function CardDemo() {
 	return (
