@@ -1,6 +1,8 @@
 import {type IconProps} from '../types'
 
-function IconClock({size = 16, className = ''}: IconProps) {
+function IconClock({
+	size = 16, className = '', style,
+}: IconProps) {
 	return (
 		<svg
 			width={size}
@@ -12,6 +14,7 @@ function IconClock({size = 16, className = ''}: IconProps) {
 			strokeLinecap="round"
 			strokeLinejoin="round"
 			className={className}
+			style={style}
 		>
 			<circle
 				cx="12"

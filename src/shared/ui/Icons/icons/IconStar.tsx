@@ -1,6 +1,8 @@
 import {type IconProps} from '../types'
 
-function IconStar({size = 16, className = ''}: IconProps) {
+function IconStar({
+	size = 16, className = '', style,
+}: IconProps) {
 	return (
 		<svg
 			width={size}
@@ -12,6 +14,7 @@ function IconStar({size = 16, className = ''}: IconProps) {
 			strokeLinecap="round"
 			strokeLinejoin="round"
 			className={className}
+			style={style}
 		>
 			<polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
 		</svg>

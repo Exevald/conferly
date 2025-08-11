@@ -1,6 +1,8 @@
 import {type IconProps} from '../types'
 
-function IconUpload({size = 16, className = ''}: IconProps) {
+function IconUpload({
+	size = 16, className = '', style,
+}: IconProps) {
 	return (
 		<svg
 			width={size}
@@ -12,6 +14,7 @@ function IconUpload({size = 16, className = ''}: IconProps) {
 			strokeLinecap="round"
 			strokeLinejoin="round"
 			className={className}
+			style={style}
 		>
 			<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
 			<polyline points="7,10 12,15 17,10" />

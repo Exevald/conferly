@@ -1,6 +1,8 @@
 import {type IconProps} from '../types'
 
-function IconCalendarOff({size = 16, className = ''}: IconProps) {
+function IconCalendarOff({
+	size = 16, className = '', style,
+}: IconProps) {
 	return (
 		<svg
 			width={size}
@@ -12,6 +14,7 @@ function IconCalendarOff({size = 16, className = ''}: IconProps) {
 			strokeLinecap="round"
 			strokeLinejoin="round"
 			className={className}
+			style={style}
 		>
 			<rect
 				x="3"

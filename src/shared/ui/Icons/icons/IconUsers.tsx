@@ -1,6 +1,8 @@
 import {type IconProps} from '../types'
 
-function IconUsers({size = 16, className = ''}: IconProps) {
+function IconUsers({
+	size = 16, className = '', style,
+}: IconProps) {
 	return (
 		<svg
 			width={size}
@@ -12,6 +14,7 @@ function IconUsers({size = 16, className = ''}: IconProps) {
 			strokeLinecap="round"
 			strokeLinejoin="round"
 			className={className}
+			style={style}
 		>
 			<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
 			<circle
@@ -19,8 +22,8 @@ function IconUsers({size = 16, className = ''}: IconProps) {
 				cy="7"
 				r="4"
 			/>
-			<path d="m22 21-2-2" />
-			<path d="M16 16l4 4 4-4" />
+			<path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+			<path d="M16 3.13a4 4 0 0 1 0 7.75" />
 		</svg>
 	)
 }
