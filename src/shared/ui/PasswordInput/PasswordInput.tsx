@@ -1,3 +1,5 @@
+'use client'
+
 import {type ChangeEvent, useState} from 'react'
 import {IconEye} from '../Icons/icons/IconEye'
 import {IconEyeOff} from '../Icons/icons/IconEyeOff'
