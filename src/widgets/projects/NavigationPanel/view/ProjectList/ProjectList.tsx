@@ -1,8 +1,8 @@
-import {IconPlus} from '@tabler/icons-react'
 import styles from '../../NavigationPanel.module.css'
 import {
 	Button,
 	Group,
+	IconPlus,
 	Stack,
 	Title,
 } from '@/shared/ui'

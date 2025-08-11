@@ -1,7 +1,8 @@
-import {IconPlus, IconUsers} from '@tabler/icons-react'
 import {
 	Button,
 	Group,
+	IconPlus,
+	IconUsers,
 	Title,
 } from '@/shared/ui'
 

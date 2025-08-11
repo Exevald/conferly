@@ -1,12 +1,10 @@
+import styles from '../../NavigationPanel.module.css'
 import {
+	Button,
 	IconClock,
 	IconStar,
 	IconTrash,
 	IconUsers,
-} from '@tabler/icons-react'
-import styles from '../../NavigationPanel.module.css'
-import {
-	Button,
 	Stack,
 	Title,
 } from '@/shared/ui'

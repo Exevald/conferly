@@ -1,5 +1,5 @@
-import {IconInbox} from '@tabler/icons-react'
 import {
+	IconInbox,
 	Stack,
 	Text,
 	Title,
@@ -37,7 +37,7 @@ function EmptyState({
 				{icon || (
 					<IconInbox
 						size={40}
-						color={colors.text.muted}
+						style={{color: colors.text.muted}}
 					/>
 				)}
 			</div>

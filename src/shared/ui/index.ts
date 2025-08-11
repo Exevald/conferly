@@ -26,6 +26,28 @@ export {TextInput} from './TextInput/TextInput'
 export {Tooltip} from './Tooltip/Tooltip'
 export {Image} from './Image/Image'
 
+export {
+	IconCalendar,
+	IconCalendarOff,
+	IconClock,
+	IconEye,
+	IconEyeOff,
+	IconFileText,
+	IconFolder,
+	IconGrid,
+	IconInbox,
+	IconList,
+	IconMapPin,
+	IconPlus,
+	IconRows,
+	IconSearch,
+	IconSettings,
+	IconStar,
+	IconTrash,
+	IconUpload,
+	IconUsers,
+} from './Icons/Icons'
+
 export {BadgeDemo} from './Badge/BadgeDemo'
 export {BoxDemo} from './Box/BoxDemo'
 export {ButtonDemo} from './Button/ButtonDemo'

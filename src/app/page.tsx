@@ -1,4 +1,3 @@
-import {IconCalendarOff} from '@tabler/icons-react'
 import {mockEvents} from '@/shared/lib/mock-data'
 import {
 	Badge,
@@ -8,6 +7,7 @@ import {
 	EventGrid,
 	EventList,
 	Group,
+	IconCalendarOff,
 	Stack,
 	Text,
 	Title,
@@ -103,7 +103,7 @@ async function HomePage({searchParams}: HomePageProps) {
 							icon={(
 								<IconCalendarOff
 									size={40}
-									color={colors.text.muted}
+									style={{color: colors.text.muted}}
 								/>
 							)}
 						/>

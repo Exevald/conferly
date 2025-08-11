@@ -9,7 +9,6 @@
     "lint": "eslint src/ --ext .ts,.tsx,.js,.jsx --fix"
   },
   "dependencies": {
-    "@tabler/icons-react": "^3.34.1",
     "next": "15.4.5",
     "react": "19.1.0",
     "react-dom": "19.1.0"
