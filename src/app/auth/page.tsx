@@ -1,11 +1,12 @@
-'use client'
-
-import {useSearchParams} from 'next/navigation'
 import {LoginForm, RegisterForm} from '@/shared/ui'
 
-function AuthPage() {
-	const searchParams = useSearchParams()
-	const mode = searchParams.get('mode') || 'login'
+type AuthPageProps = {
+	searchParams: Promise<{mode?: string}>,
+}
+
+async function AuthPage({searchParams}: AuthPageProps) {
+	const params = await searchParams
+	const mode = params.mode || 'login'
 
 	if (mode === 'register') {
 		return <RegisterForm />
