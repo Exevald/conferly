@@ -1,13 +1,12 @@
 .selectList {
 	display: flex;
 	flex-direction: column;
-	gap: var(--spacing-xs);
 }
 
 .selectListItem {
 	display: flex;
 	align-items: center;
-	gap: var(--spacing-sm);
+	gap: 6px;
 	padding: 0;
 	border: none;
 	background: none;
@@ -86,7 +85,6 @@
 	min-height: 44px;
 }
 
-/* Варианты */
 .selectListItem--default {
 	color: var(--color-text-primary);
 }
@@ -103,7 +101,6 @@
 	color: var(--color-primary);
 }
 
-/* Иконки */
 .selectListItemIcon {
 	display: flex;
 	align-items: center;
