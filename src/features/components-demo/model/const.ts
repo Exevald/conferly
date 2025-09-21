@@ -52,6 +52,10 @@ const components = [
 		id: 'box',
 		name: 'Box',
 	},
+	{
+		id: 'select-list',
+		name: 'SelectList',
+	},
 ]
 
 export {

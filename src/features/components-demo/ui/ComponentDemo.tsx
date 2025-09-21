@@ -5,6 +5,7 @@ import {
 	CardDemo,
 	ContainerDemo,
 	GroupDemo,
+	SelectListDemo,
 	SkeletonDemo,
 	Stack,
 	StackDemo,
@@ -46,6 +47,8 @@ function ComponentDemo({componentId}: ComponentDemoProps) {
 			return <GroupDemo />
 		case 'box':
 			return <BoxDemo />
+		case 'select-list':
+			return <SelectListDemo />
 		default:
 			return (
 				<Stack gap="lg">

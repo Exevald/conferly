@@ -1,11 +1,46 @@
-import styles from '../../NavigationPanel.module.css'
 import {
-	Button,
 	Group,
+	IconCalendar,
+	IconFolder,
 	IconPlus,
+	SelectList,
 	Stack,
 	Title,
 } from '@/shared/ui'
+import {type SelectListItem} from '@/shared/ui/SelectList/SelectList'
+
+const projectItems: SelectListItem[] = [
+	{
+		id: 'project1',
+		label: 'Веб-разработка 1 курс (2...',
+		icon: <IconFolder size={16} />,
+	},
+	{
+		id: 'project2',
+		label: 'Институт',
+		icon: <IconFolder size={16} />,
+	},
+	{
+		id: 'project3',
+		label: 'Личное',
+		icon: <IconFolder size={16} />,
+	},
+	{
+		id: 'project4',
+		label: 'Марафон по веб-разработке',
+		icon: <IconFolder size={16} />,
+	},
+	{
+		id: 'project5',
+		label: 'Погружение в программирование',
+		icon: <IconFolder size={16} />,
+	},
+	{
+		id: 'work',
+		label: 'Работа',
+		icon: <IconCalendar size={16} />,
+	},
+]
 
 function ProjectList() {
 	return (
@@ -18,57 +53,14 @@ function ProjectList() {
 					order={4}
 					color="primary"
 				>{'Список проектов'}</Title>
-				<Button
-					variant="subtle"
-					size="sm"
-				>
-					<IconPlus size={16} />
-				</Button>
+				<IconPlus size={16} />
 			</Group>
-			<Stack gap="xs">
-				<Button
-					variant="subtle"
-					size="sm"
-					className={styles.sidebarButton}
-				>
-					{'Веб-разработка 1 курс (2...'}
-				</Button>
-				<Button
-					variant="subtle"
-					size="sm"
-					className={styles.sidebarButton}
-				>
-					{'Институт'}
-				</Button>
-				<Button
-					variant="subtle"
-					size="sm"
-					className={styles.sidebarButton}
-				>
-					{'Личное'}
-				</Button>
-				<Button
-					variant="subtle"
-					size="sm"
-					className={styles.sidebarButton}
-				>
-					{'Марафон по веб-разработке'}
-				</Button>
-				<Button
-					variant="subtle"
-					size="sm"
-					className={styles.sidebarButton}
-				>
-					{'Погружение в программирование'}
-				</Button>
-				<Button
-					variant="primary"
-					size="sm"
-					className={styles.sidebarButton}
-				>
-					{'Работа'}
-				</Button>
-			</Stack>
+			<SelectList
+				items={projectItems}
+				selectedId="work"
+				variant="subtle"
+				size="sm"
+			/>
 		</Stack>
 	)
 }
