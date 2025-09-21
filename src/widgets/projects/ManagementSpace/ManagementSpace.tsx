@@ -6,6 +6,7 @@ function ManagementSpace() {
 		<Container
 			size="lg"
 			py="xl"
+			px="xl"
 		>
 			<Stack gap="xl">
 				<TopBar />
