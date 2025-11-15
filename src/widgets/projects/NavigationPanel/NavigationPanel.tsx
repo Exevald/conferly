@@ -6,7 +6,7 @@ import {Stack} from '@/shared/ui'
 function NavigationPanel() {
 	return (
 		<aside className={styles.sidebar}>
-			<Stack gap="xl">
+			<Stack gap={24}>
 				<ProjectsCategories />
 				<ProjectList />
 			</Stack>

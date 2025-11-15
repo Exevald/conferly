@@ -7,7 +7,7 @@ import {
 
 function ButtonDemo() {
 	return (
-		<Stack gap="lg">
+		<Stack gap={16}>
 			<Title order={4}>{'Размеры'}</Title>
 			<Group>
 				<Button

@@ -13,7 +13,7 @@ function BoxDemo() {
 	}
 
 	return (
-		<Stack gap="lg">
+		<Stack gap={16}>
 			<Title order={4}>{'Базовый контейнер'}</Title>
 			<Box
 				style={boxStyle}
@@ -21,31 +21,31 @@ function BoxDemo() {
 				<Text>{'Контент внутри Box'}</Text>
 			</Box>
 			<Title order={4}>{'Разные отступы'}</Title>
-			<Stack gap="sm">
+			<Stack gap={8}>
 				<Box
-					px="xs"
-					py="xs"
+					px={8}
+					py={8}
 					style={boxStyle}
 				>
 					<Text>{'Padding XS'}</Text>
 				</Box>
 				<Box
-					px="sm"
-					py="sm"
+					px={16}
+					py={16}
 					style={boxStyle}
 				>
 					<Text>{'Padding SM'}</Text>
 				</Box>
 				<Box
-					px="md"
-					py="md"
+					px={24}
+					py={24}
 					style={boxStyle}
 				>
 					<Text>{'Padding MD'}</Text>
 				</Box>
 				<Box
-					px="lg"
-					py="lg"
+					px={32}
+					py={32}
 					style={boxStyle}
 				>
 					<Text>{'Padding LG'}</Text>

@@ -7,8 +7,8 @@ type BoxProps = {
 	component?: 'div' | 'header' | 'main' | 'section' | 'article' | 'aside' | 'nav' | 'footer',
 	className?: string,
 	style?: React.CSSProperties,
-	py?: number | string,
-	px?: number | string,
+	py?: number,
+	px?: number,
 	bg?: string,
 	c?: string,
 }

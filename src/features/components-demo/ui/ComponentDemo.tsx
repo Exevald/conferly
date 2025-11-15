@@ -51,7 +51,7 @@ function ComponentDemo({componentId}: ComponentDemoProps) {
 			return <SelectListDemo />
 		default:
 			return (
-				<Stack gap="lg">
+				<Stack gap={16}>
 					<Title order={2}>{'Компонент '}{componentId}</Title>
 					<Text>{'Демонстрация компонента будет добавлена позже'}</Text>
 				</Stack>

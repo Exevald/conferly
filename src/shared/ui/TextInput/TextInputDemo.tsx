@@ -6,7 +6,7 @@ import {
 
 function TextInputDemo() {
 	return (
-		<Stack gap="lg">
+		<Stack gap={16}>
 			<Title order={4}>{'Базовый'}</Title>
 			<TextInput placeholder="Введите текст" />
 			<Title order={4}>{'С лейблом'}</Title>
@@ -21,7 +21,7 @@ function TextInputDemo() {
 				error="Неверный формат email"
 			/>
 			<Title order={4}>{'Размеры'}</Title>
-			<Stack gap="sm">
+			<Stack gap={8}>
 				<TextInput
 					size="xs"
 					placeholder="Extra Small"

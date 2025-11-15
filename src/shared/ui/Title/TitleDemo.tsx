@@ -2,9 +2,9 @@ import {Stack, Title} from '@/shared/ui'
 
 function TitleDemo() {
 	return (
-		<Stack gap="lg">
+		<Stack gap={16}>
 			<Title order={4}>{'Уровни'}</Title>
-			<Stack gap="sm">
+			<Stack gap={8}>
 				<Title order={1}>{'Heading 1'}</Title>
 				<Title order={2}>{'Heading 2'}</Title>
 				<Title order={3}>{'Heading 3'}</Title>

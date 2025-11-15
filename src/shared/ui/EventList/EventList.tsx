@@ -21,7 +21,7 @@ function EventListItem({
 			withBorder={true}
 			className={styles.eventListItem}
 		>
-			<Stack gap="md">
+			<Stack gap={12}>
 				<EventHeader event={event} />
 				<EventMeta event={event} />
 			</Stack>
@@ -37,7 +37,7 @@ function EventList({
 	events,
 }: EventListProps) {
 	return (
-		<Stack gap="xs">
+		<Stack gap={4}>
 			{events.map(event => (
 				<EventListItem
 					key={event.id}

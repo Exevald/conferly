@@ -40,7 +40,7 @@ function ViewModeToggle({
 	}
 
 	return (
-		<Group gap="xs">
+		<Group gap={4}>
 			<ViewModeToggleButton
 				mode="rows"
 				currentViewMode={viewMode}

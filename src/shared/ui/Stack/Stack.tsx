@@ -7,23 +7,23 @@ type StackJustify = 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'sp
 
 type StackProps = {
 	children: ReactNode,
-	gap?: number | string,
+	gap?: number,
 	align?: StackAlign,
 	justify?: StackJustify,
 	className?: string,
 	textAlign?: 'left' | 'center' | 'right',
 	/** vertical padding */
-	py?: number | string,
+	py?: number,
 	/** horizontal padding */
-	px?: number | string,
+	px?: number,
 	/** top padding */
-	pt?: number | string,
+	pt?: number,
 	/** bottom padding */
-	pb?: number | string,
+	pb?: number,
 	/** left padding */
-	pl?: number | string,
+	pl?: number,
 	/** right padding */
-	pr?: number | string,
+	pr?: number,
 }
 
 function Stack({

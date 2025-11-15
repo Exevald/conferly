@@ -32,7 +32,7 @@ function LoginForm() {
 					{'Вход в систему'}
 				</Title>
 				<form>
-					<Stack gap="md">
+					<Stack gap={12}>
 						<TextInput
 							label="Email"
 							placeholder="example@email.com"

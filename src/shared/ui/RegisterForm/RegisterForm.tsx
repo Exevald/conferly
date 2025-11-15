@@ -32,7 +32,7 @@ function RegisterForm() {
 					{'Регистрация'}
 				</Title>
 				<form>
-					<Stack gap="md">
+					<Stack gap={12}>
 						<TextInput
 							label="Имя"
 							placeholder="Ваше имя"

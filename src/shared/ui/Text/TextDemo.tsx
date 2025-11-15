@@ -6,9 +6,9 @@ import {
 
 function TextDemo() {
 	return (
-		<Stack gap="lg">
+		<Stack gap={16}>
 			<Title order={4}>{'Размеры'}</Title>
-			<Stack gap="sm">
+			<Stack gap={8}>
 				<Text size="xs">{'Extra Small Text'}</Text>
 				<Text size="sm">{'Small Text'}</Text>
 				<Text size="md">{'Medium Text'}</Text>
@@ -16,7 +16,7 @@ function TextDemo() {
 				<Text size="xl">{'Extra Large Text'}</Text>
 			</Stack>
 			<Title order={4}>{'Цвета'}</Title>
-			<Stack gap="sm">
+			<Stack gap={8}>
 				<Text color="primary">{'Primary Text'}</Text>
 				<Text color="secondary">{'Secondary Text'}</Text>
 				<Text color="muted">{'Muted Text'}</Text>

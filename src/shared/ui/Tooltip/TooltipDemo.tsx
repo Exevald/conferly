@@ -8,7 +8,7 @@ import {
 
 function TooltipDemo() {
 	return (
-		<Stack gap="lg">
+		<Stack gap={16}>
 			<Title order={4}>{'Базовый'}</Title>
 			<Tooltip content="Это подсказка">
 				<Button>{'Наведи на меня'}</Button>

@@ -14,7 +14,7 @@ function EventGridItemBadges({
 }: EventGridItemBadgesProps) {
 	return (
 		<Group
-			gap="xs"
+			gap={4}
 			wrap={true}
 		>
 			<Badge

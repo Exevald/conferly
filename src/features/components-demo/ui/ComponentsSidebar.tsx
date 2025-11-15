@@ -23,13 +23,13 @@ function ComponentsSidebar({
 		<Box
 			component="aside"
 			bg="#f8f9fa"
-			px="md"
-			py="md"
+			px={24}
+			py={24}
 			className={styles.sidebar}
 		>
-			<Stack gap="md">
+			<Stack gap={12}>
 				<Title order={3}>{'Компоненты'}</Title>
-				<Stack gap="xs">
+				<Stack gap={4}>
 					{components.map(component => (
 						<Button
 							key={component.id}

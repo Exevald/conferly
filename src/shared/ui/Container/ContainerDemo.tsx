@@ -16,9 +16,9 @@ function ContainerDemo() {
 	}
 
 	return (
-		<Stack gap="lg">
+		<Stack gap={16}>
 			<Title order={4}>{'Размеры'}</Title>
-			<Stack gap="md">
+			<Stack gap={12}>
 				<Container size="xs">
 					<Box
 						style={boxStyle}

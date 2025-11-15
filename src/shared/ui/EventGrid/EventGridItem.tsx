@@ -35,8 +35,8 @@ function EventGridItem({
 				/>
 			</div>
 			<Stack
-				gap="sm"
-				pt="sm"
+				gap={8}
+				pt={16}
 			>
 				<EventGridItemHeader event={event} />
 				<EventGridItemDescription event={event} />

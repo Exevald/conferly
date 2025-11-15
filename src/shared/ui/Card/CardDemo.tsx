@@ -7,7 +7,7 @@ import {
 
 function CardDemo() {
 	return (
-		<Stack gap="lg">
+		<Stack gap={16}>
 			<Title order={4}>{'Базовый (с границами)'}</Title>
 			<Card>
 				<Text>{'Это базовая карточка с содержимым'}</Text>
@@ -25,7 +25,7 @@ function CardDemo() {
 				<Text>{'Содержимое карточки с заголовком'}</Text>
 			</Card>
 			<Title order={4}>{'Разные тени'}</Title>
-			<Stack gap="md">
+			<Stack gap={12}>
 				<Card shadow="xs">
 					<Text>{'Карточка с легкой тенью'}</Text>
 				</Card>
@@ -37,7 +37,7 @@ function CardDemo() {
 				</Card>
 			</Stack>
 			<Title order={4}>{'Разные закругления'}</Title>
-			<Stack gap="md">
+			<Stack gap={12}>
 				<Card radius="xs">
 					<Text>{'Маленькие закругления'}</Text>
 				</Card>

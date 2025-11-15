@@ -7,9 +7,9 @@ import {
 
 function SkeletonDemo() {
 	return (
-		<Stack gap="lg">
+		<Stack gap={16}>
 			<Title order={4}>{'Текст'}</Title>
-			<Stack gap="sm">
+			<Stack gap={8}>
 				<Skeleton height={20} />
 				<Skeleton
 					height={16}

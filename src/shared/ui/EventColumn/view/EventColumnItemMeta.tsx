@@ -10,8 +10,8 @@ function EventColumnItemMeta({
 	event,
 }: EventColumnItemMetaProps) {
 	return (
-		<Group gap="md">
-			<Group gap="xs">
+		<Group gap={12}>
+			<Group gap={4}>
 				<IconCalendar size={16} />
 				<Text
 					size="sm"
@@ -20,7 +20,7 @@ function EventColumnItemMeta({
 					{event.date}
 				</Text>
 			</Group>
-			<Group gap="xs">
+			<Group gap={4}>
 				<IconMapPin size={16} />
 				<Text
 					size="sm"

@@ -13,11 +13,11 @@ function TopBar() {
 			align="center"
 		>
 			<Group
-				gap="md"
+				gap={12}
 				align="center"
 			>
 				<Title order={1}>{'Работа'}</Title>
-				<Group gap="xs">
+				<Group gap={4}>
 					<Button
 						variant="subtle"
 						size="sm"

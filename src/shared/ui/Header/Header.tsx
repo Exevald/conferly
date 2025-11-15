@@ -41,7 +41,7 @@ function Header() {
 							{'Conferly'}
 						</Title>
 					</Link>
-					<Group gap="md">
+					<Group gap={12}>
 						<Button
 							href="/auth"
 							variant="subtle"

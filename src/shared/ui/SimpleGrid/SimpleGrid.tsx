@@ -12,7 +12,7 @@ type Breakpoint = {
 type SimpleGridProps = {
 	children: ReactNode,
 	cols?: SimpleGridCols,
-	spacing?: number | string,
+	spacing?: number,
 	breakpoints?: Breakpoint[],
 	className?: string,
 	style?: React.CSSProperties,

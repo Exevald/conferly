@@ -34,7 +34,7 @@ const categoryItems: SelectListItem[] = [
 
 function ProjectsCategories() {
 	return (
-		<Stack gap="md">
+		<Stack gap={12}>
 			<Title
 				order={4}
 				color="primary"

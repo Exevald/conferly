@@ -9,9 +9,9 @@ type ContainerProps = {
 	size?: ContainerSize,
 	className?: string,
 	/** vertical padding */
-	py?: number | string,
+	py?: number,
 	/** horizontal padding */
-	px?: number | string,
+	px?: number,
 	flex?: string,
 }
 

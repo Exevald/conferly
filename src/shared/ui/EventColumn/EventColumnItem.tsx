@@ -35,8 +35,8 @@ function EventColumnItem({
 				/>
 			</div>
 			<Stack
-				gap="md"
-				pt="md"
+				gap={12}
+				pt={24}
 			>
 				<EventColumnItemHeader event={event} />
 				<EventColumnItemDescription event={event} />

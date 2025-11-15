@@ -5,10 +5,10 @@ function ManagementSpace() {
 	return (
 		<Container
 			size="lg"
-			py="xl"
-			px="xl"
+			py={48}
+			px={48}
 		>
-			<Stack gap="xl">
+			<Stack gap={24}>
 				<TopBar />
 			</Stack>
 		</Container>

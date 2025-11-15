@@ -7,7 +7,7 @@ import {
 
 function GroupDemo() {
 	return (
-		<Stack gap="lg">
+		<Stack gap={16}>
 			<Title order={4}>{'Горизонтальное расположение'}</Title>
 			<Group>
 				<Button variant="primary">{'Кнопка 1'}</Button>
@@ -15,42 +15,42 @@ function GroupDemo() {
 				<Button variant="subtle">{'Кнопка 3'}</Button>
 			</Group>
 			<Title order={4}>{'Разные отступы'}</Title>
-			<Stack gap="sm">
-				<Group gap="xs">
+			<Stack gap={8}>
+				<Group gap={4}>
 					<Button size="sm">{'XS Gap'}</Button>
 					<Button size="sm">{'XS Gap'}</Button>
 				</Group>
-				<Group gap="sm">
+				<Group gap={8}>
 					<Button size="sm">{'SM Gap'}</Button>
 					<Button size="sm">{'SM Gap'}</Button>
 				</Group>
-				<Group gap="md">
+				<Group gap={12}>
 					<Button size="sm">{'MD Gap'}</Button>
 					<Button size="sm">{'MD Gap'}</Button>
 				</Group>
-				<Group gap="lg">
+				<Group gap={16}>
 					<Button size="sm">{'LG Gap'}</Button>
 					<Button size="sm">{'LG Gap'}</Button>
 				</Group>
 			</Stack>
 			<Title order={4}>{'Выравнивание'}</Title>
-			<Stack gap="sm">
+			<Stack gap={8}>
 				<Group
-					gap="sm"
+					gap={8}
 					justify="left"
 				>
 					<Button size="sm">{'Left'}</Button>
 					<Button size="sm">{'Left'}</Button>
 				</Group>
 				<Group
-					gap="sm"
+					gap={8}
 					justify="center"
 				>
 					<Button size="sm">{'Center'}</Button>
 					<Button size="sm">{'Center'}</Button>
 				</Group>
 				<Group
-					gap="sm"
+					gap={8}
 					justify="right"
 				>
 					<Button size="sm">{'Right'}</Button>

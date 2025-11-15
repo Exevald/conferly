@@ -76,8 +76,8 @@ function SelectListDemo() {
 	const [selectedProject, setSelectedProject] = useState('work')
 
 	return (
-		<Stack gap="xl">
-			<Stack gap="lg">
+		<Stack gap={24}>
+			<Stack gap={16}>
 				<Title order={3}>{'Категории проектов'}</Title>
 				<SelectList
 					items={demoItems}
@@ -91,7 +91,7 @@ function SelectListDemo() {
 					color="secondary"
 				>{'Выбрано: '}{selectedCategory}</Text>
 			</Stack>
-			<Stack gap="lg">
+			<Stack gap={16}>
 				<Title order={3}>{'Список проектов'}</Title>
 				<SelectList
 					items={projectItems}
@@ -105,9 +105,9 @@ function SelectListDemo() {
 					color="secondary"
 				>{'Выбрано: '}{selectedProject}</Text>
 			</Stack>
-			<Stack gap="lg">
+			<Stack gap={16}>
 				<Title order={3}>{'Разные размеры'}</Title>
-				<Stack gap="md">
+				<Stack gap={12}>
 					<Text size="sm">{'Маленький (sm):'}</Text>
 					<SelectList
 						items={demoItems.slice(0, 2)}
@@ -115,7 +115,7 @@ function SelectListDemo() {
 						variant="subtle"
 					/>
 				</Stack>
-				<Stack gap="md">
+				<Stack gap={12}>
 					<Text size="sm">{'Средний (md):'}</Text>
 					<SelectList
 						items={demoItems.slice(0, 2)}
@@ -123,7 +123,7 @@ function SelectListDemo() {
 						variant="subtle"
 					/>
 				</Stack>
-				<Stack gap="md">
+				<Stack gap={12}>
 					<Text size="sm">{'Большой (lg):'}</Text>
 					<SelectList
 						items={demoItems.slice(0, 2)}

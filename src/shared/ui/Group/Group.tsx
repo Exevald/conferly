@@ -9,7 +9,7 @@ type GroupProps = {
 	children: ReactNode,
 	justify?: GroupPosition,
 	align?: GroupAlign,
-	gap?: number | string,
+	gap?: number,
 	className?: string,
 	wrap?: boolean,
 }

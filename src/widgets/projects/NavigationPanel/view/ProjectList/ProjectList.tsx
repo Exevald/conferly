@@ -44,7 +44,7 @@ const projectItems: SelectListItem[] = [
 
 function ProjectList() {
 	return (
-		<Stack gap="md">
+		<Stack gap={12}>
 			<Group
 				justify="apart"
 				align="center"
