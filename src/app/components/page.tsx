@@ -23,11 +23,11 @@ function ComponentsPage() {
 				onComponentSelect={setSelectedComponent}
 			/>
 			<Box
-				px="lg"
-				py="md"
+				px={32}
+				py={24}
 				style={{flex: '1'}}
 			>
-				<Stack gap="lg">
+				<Stack gap={16}>
 					<Title order={3}>
 						{name}
 					</Title>

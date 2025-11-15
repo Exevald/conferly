@@ -8,7 +8,7 @@ type GroupProps = {
 	children: ReactNode,
 	justify?: GroupPosition,
 	align?: GroupAlign,
-	gap?: 'xs' | 'sm' | 'md' | 'lg' | 'xl',
+	gap?: number | string,
 	className?: string,
 	wrap?: boolean,
 }
@@ -17,21 +17,33 @@ function Group({
 	children,
 	justify = 'left',
 	align = 'stretch',
-	gap = 'md',
+	gap = 12,
 	className = '',
 	wrap = false,
 }: GroupProps) {
+	const inlineStyles: React.CSSProperties = {}
+
+	if (gap !== undefined) {
+		inlineStyles.gap = gap
+	}
+
 	const groupClasses = [
 		styles.group,
 		styles[`group--justify-${justify}`],
 		styles[`group--align-${align}`],
-		styles[`group--gap-${gap}`],
 		wrap && styles['group--wrap'],
 		className,
 	].filter(Boolean).join(' ')
 
 	return (
-		<div className={groupClasses}>
+		<div
+			className={groupClasses}
+			style={
+				Object.keys(inlineStyles).length > 0
+					? inlineStyles
+					: undefined
+			}
+		>
 			{children}
 		</div>
 	)

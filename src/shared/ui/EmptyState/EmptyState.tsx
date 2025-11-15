@@ -17,10 +17,10 @@ function EmptyState({
 }: EmptyStateProps) {
 	return (
 		<Stack
-			gap="md"
+			gap={12}
 			textAlign="center"
-			py="xl"
-			px="md"
+			py={48}
+			px={24}
 		>
 			<div
 				style={{

@@ -12,7 +12,7 @@ function EventColumn({
 	return (
 		<SimpleGrid
 			cols={1}
-			spacing="xl"
+			spacing={32}
 		>
 			{events.map(event => (
 				<EventColumnItem

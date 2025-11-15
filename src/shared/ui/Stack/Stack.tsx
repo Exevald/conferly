@@ -1,35 +1,33 @@
 import {type ReactNode} from 'react'
 import styles from './Stack.module.css'
 
-type StackGap = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 type StackAlign = 'stretch' | 'center' | 'flex-start' | 'flex-end'
 type StackJustify = 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around'
-type StackPadding = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 type StackProps = {
 	children: ReactNode,
-	gap?: StackGap,
+	gap?: number | string,
 	align?: StackAlign,
 	justify?: StackJustify,
 	className?: string,
 	textAlign?: 'left' | 'center' | 'right',
 	/** vertical padding */
-	py?: StackPadding,
+	py?: number | string,
 	/** horizontal padding */
-	px?: StackPadding,
+	px?: number | string,
 	/** top padding */
-	pt?: StackPadding,
+	pt?: number | string,
 	/** bottom padding */
-	pb?: StackPadding,
+	pb?: number | string,
 	/** left padding */
-	pl?: StackPadding,
+	pl?: number | string,
 	/** right padding */
-	pr?: StackPadding,
+	pr?: number | string,
 }
 
 function Stack({
 	children,
-	gap = 'md',
+	gap = 12,
 	align = 'stretch',
 	justify = 'flex-start',
 	className = '',
@@ -41,23 +39,55 @@ function Stack({
 	pl,
 	pr,
 }: StackProps) {
+	const inlineStyles: React.CSSProperties = {}
+
+	if (gap !== undefined) {
+		inlineStyles.gap = gap
+	}
+
+	if (py !== undefined && pt === undefined && pb === undefined) {
+		inlineStyles.paddingTop = py
+		inlineStyles.paddingBottom = py
+	}
+	else {
+		if (pt !== undefined) {
+			inlineStyles.paddingTop = pt
+		}
+		if (pb !== undefined) {
+			inlineStyles.paddingBottom = pb
+		}
+	}
+
+	if (px !== undefined && pl === undefined && pr === undefined) {
+		inlineStyles.paddingLeft = px
+		inlineStyles.paddingRight = px
+	}
+	else {
+		if (pl !== undefined) {
+			inlineStyles.paddingLeft = pl
+		}
+		if (pr !== undefined) {
+			inlineStyles.paddingRight = pr
+		}
+	}
+
 	const stackClasses = [
 		styles.stack,
-		styles[`stack--gap-${gap}`],
 		styles[`stack--align-${align}`],
 		styles[`stack--justify-${justify}`],
 		textAlign && styles[`stack--text-${textAlign}`],
-		py && styles[`stack--py-${py}`],
-		px && styles[`stack--px-${px}`],
-		pt && styles[`stack--pt-${pt}`],
-		pb && styles[`stack--pb-${pb}`],
-		pl && styles[`stack--pl-${pl}`],
-		pr && styles[`stack--pr-${pr}`],
 		className,
 	].filter(Boolean).join(' ')
 
 	return (
-		<div className={stackClasses}>
+		<div
+			className={stackClasses}
+			style={
+				Object.keys(inlineStyles).length > 0
+					? inlineStyles
+					: undefined
+			}
+		>
 			{children}
 		</div>
 	)
@@ -66,8 +96,6 @@ function Stack({
 export {
 	Stack,
 	type StackProps,
-	type StackGap,
 	type StackAlign,
 	type StackJustify,
-	type StackPadding,
 }

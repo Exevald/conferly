@@ -1,6 +1,7 @@
 import {EventGridItem} from './EventGridItem'
 import {type Event} from '@/entities/Event'
 import {SimpleGrid} from '@/shared/ui'
+import {BREAKPOINTS} from '@/shared/ui/constants'
 
 type EventGridProps = {
 	events: Event[],
@@ -12,12 +13,19 @@ function EventGrid({
 	return (
 		<SimpleGrid
 			cols={3}
-			spacing="lg"
-			breakpoints={{
-				xs: 1,
-				sm: 2,
-				lg: 3,
-			}}
+			spacing={24}
+			breakpoints={[{
+				minWidth: BREAKPOINTS.mobile,
+				cols: 1,
+			},
+			{
+				minWidth: BREAKPOINTS.tablet,
+				cols: 2,
+			},
+			{
+				minWidth: BREAKPOINTS.largeDesktop,
+				cols: 3,
+			}]}
 		>
 			{events.map(event => (
 				<EventGridItem

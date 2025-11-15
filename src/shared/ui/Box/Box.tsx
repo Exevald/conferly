@@ -6,8 +6,8 @@ type BoxProps = {
 	component?: 'div' | 'header' | 'main' | 'section' | 'article' | 'aside' | 'nav' | 'footer',
 	className?: string,
 	style?: React.CSSProperties,
-	py?: 'xs' | 'sm' | 'md' | 'lg' | 'xl',
-	px?: 'xs' | 'sm' | 'md' | 'lg' | 'xl',
+	py?: number | string,
+	px?: number | string,
 	bg?: string,
 	c?: string,
 }
@@ -22,16 +22,27 @@ function Box({
 	bg,
 	c,
 }: BoxProps) {
+	const inlineStyles: React.CSSProperties = {}
+
+	if (py !== undefined) {
+		inlineStyles.paddingTop = py
+		inlineStyles.paddingBottom = py
+	}
+
+	if (px !== undefined) {
+		inlineStyles.paddingLeft = px
+		inlineStyles.paddingRight = px
+	}
+
 	const boxClasses = [
 		styles.box,
-		py && styles[`box--py-${py}`],
-		px && styles[`box--px-${px}`],
 		className,
 	].filter(Boolean).join(' ')
 
 	const boxStyle = {
 		backgroundColor: bg,
 		color: c,
+		...inlineStyles,
 		...style,
 	}
 

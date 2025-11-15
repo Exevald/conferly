@@ -1,21 +1,18 @@
-import {type ReactNode} from 'react'
+import {type ReactNode, useId} from 'react'
 import styles from './SimpleGrid.module.css'
 
 type SimpleGridCols = 1 | 2 | 3 | 4 | 5 | 6
-type SimpleGridSpacing = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-type SimpleGridBreakpoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+
+type Breakpoint = {
+	minWidth: number,
+	cols: SimpleGridCols,
+}
 
 type SimpleGridProps = {
 	children: ReactNode,
 	cols?: SimpleGridCols,
-	spacing?: SimpleGridSpacing,
-	breakpoints?: {
-		xs?: SimpleGridCols,
-		sm?: SimpleGridCols,
-		md?: SimpleGridCols,
-		lg?: SimpleGridCols,
-		xl?: SimpleGridCols,
-	},
+	spacing?: number | string,
+	breakpoints?: Breakpoint[],
 	className?: string,
 	style?: React.CSSProperties,
 }
@@ -23,30 +20,50 @@ type SimpleGridProps = {
 function SimpleGrid({
 	children,
 	cols = 1,
-	spacing = 'md',
+	spacing = 16,
 	breakpoints,
 	className = '',
 	style,
 }: SimpleGridProps) {
+	const gridId = useId().replace(/:/g, '-')
+	const inlineStyles: React.CSSProperties = {
+		...(style || {}),
+	}
+
+	if (spacing !== undefined) {
+		inlineStyles.gap = spacing
+	}
+
 	const gridClasses = [
 		styles.grid,
 		styles[`grid--cols-${cols}`],
-		styles[`grid--spacing-${spacing}`],
-		breakpoints?.xs && styles[`grid--breakpoint-xs-${breakpoints.xs}`],
-		breakpoints?.sm && styles[`grid--breakpoint-sm-${breakpoints.sm}`],
-		breakpoints?.md && styles[`grid--breakpoint-md-${breakpoints.md}`],
-		breakpoints?.lg && styles[`grid--breakpoint-lg-${breakpoints.lg}`],
-		breakpoints?.xl && styles[`grid--breakpoint-xl-${breakpoints.xl}`],
 		className,
 	].filter(Boolean).join(' ')
 
+	const mediaQueries = breakpoints
+		? breakpoints.map(({minWidth, cols: colsCount}) =>
+			`@media (min-width: ${minWidth}px) { .grid-${gridId} { grid-template-columns: repeat(${colsCount}, 1fr); } }`,
+		)
+		: []
+
 	return (
-		<div
-			className={gridClasses}
-			style={style}
-		>
-			{children}
-		</div>
+		<>
+			{mediaQueries.length > 0 && (
+				<style>
+					{mediaQueries.join('\n')}
+				</style>
+			)}
+			<div
+				className={`${gridClasses} grid-${gridId}`}
+				style={
+					Object.keys(inlineStyles).length > 0
+						? inlineStyles
+						: undefined
+				}
+			>
+				{children}
+			</div>
+		</>
 	)
 }
 
@@ -54,6 +71,5 @@ export {
 	SimpleGrid,
 	type SimpleGridProps,
 	type SimpleGridCols,
-	type SimpleGridSpacing,
-	type SimpleGridBreakpoint,
+	type Breakpoint,
 }

@@ -39,12 +39,12 @@ async function HomePage({searchParams}: HomePageProps) {
 	return (
 		<Container
 			size="lg"
-			py="xl"
+			py={48}
 			flex="1"
 		>
-			<Stack gap="xl">
+			<Stack gap={24}>
 				<Stack
-					gap="md"
+					gap={12}
 					textAlign="center"
 				>
 					<Title
@@ -66,7 +66,7 @@ async function HomePage({searchParams}: HomePageProps) {
 				</Stack>
 				{allEvents.length > 0
 					? (
-						<Stack gap="lg">
+						<Stack gap={16}>
 							<Group
 								justify="apart"
 								align="center"
@@ -78,7 +78,7 @@ async function HomePage({searchParams}: HomePageProps) {
 									{'Ближайшие мероприятия\r'}
 								</Title>
 								<Group
-									gap="md"
+									gap={12}
 									align="center"
 								>
 									<Badge

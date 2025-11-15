@@ -8,9 +8,9 @@ type ContainerProps = {
 	size?: ContainerSize,
 	className?: string,
 	/** vertical padding */
-	py?: 'xs' | 'sm' | 'md' | 'lg' | 'xl',
+	py?: number | string,
 	/** horizontal padding */
-	px?: 'xs' | 'sm' | 'md' | 'lg' | 'xl',
+	px?: number | string,
 	flex?: string,
 }
 
@@ -22,22 +22,36 @@ function Container({
 	px,
 	flex,
 }: ContainerProps) {
+	const inlineStyles: React.CSSProperties = {}
+
+	if (py !== undefined) {
+		inlineStyles.paddingTop = py
+		inlineStyles.paddingBottom = py
+	}
+
+	if (px !== undefined) {
+		inlineStyles.paddingLeft = px
+		inlineStyles.paddingRight = px
+	}
+
+	if (flex !== undefined) {
+		inlineStyles.flex = flex
+	}
+
 	const containerClasses = [
 		styles.container,
 		styles[`container--${size}`],
-		py && styles[`container--py-${py}`],
-		px && styles[`container--px-${px}`],
 		className,
 	].filter(Boolean).join(' ')
-
-	const style = {
-		flex,
-	}
 
 	return (
 		<div
 			className={containerClasses}
-			style={style}
+			style={
+				Object.keys(inlineStyles).length > 0
+					? inlineStyles
+					: undefined
+			}
 		>
 			{children}
 		</div>
