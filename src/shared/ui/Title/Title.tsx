@@ -1,6 +1,6 @@
 import {type ReactNode} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Title.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type TitleOrder = 1 | 2 | 3 | 4 | 5 | 6
 type TitleColor = 'primary' | 'secondary' | 'muted' | 'inherit'
@@ -33,7 +33,7 @@ function Title({
 		styles[`title--${size}`],
 		styles[`title--${color}`],
 		align !== 'left' && styles[`title--${align}`],
-		lineClamp && styles[`title--clamp-${lineClamp}`],
+		lineClamp !== undefined && styles[`title--clamp-${lineClamp}`],
 		className,
 	)
 

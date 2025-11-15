@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import {type ReactNode} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Button.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type ButtonVariant = 'primary' | 'secondary' | 'subtle'
 type ButtonSize = 'sm' | 'md' | 'lg'

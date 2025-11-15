@@ -1,6 +1,6 @@
 import {type ChangeEvent, type ReactNode} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './TextInput.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type TextInputSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 

@@ -1,8 +1,8 @@
 'use client'
 
 import {type ReactNode, useState} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Tooltip.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type TooltipPosition = 'top' | 'bottom' | 'left' | 'right'
 

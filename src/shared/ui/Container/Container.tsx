@@ -1,6 +1,6 @@
 import {type ReactNode} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Container.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type ContainerSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 

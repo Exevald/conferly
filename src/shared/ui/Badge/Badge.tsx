@@ -1,6 +1,6 @@
 import {type ReactNode} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Badge.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type BadgeColor = 'gray' | 'red' | 'blue' | 'green' | 'orange'
 type BadgeSize = 'xs' | 'sm' | 'md' | 'lg'

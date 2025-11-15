@@ -1,10 +1,10 @@
 'use client'
 
 import {type ChangeEvent, useState} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import {IconEye} from '../Icons/icons/IconEye'
 import {IconEyeOff} from '../Icons/icons/IconEyeOff'
 import styles from './PasswordInput.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type PasswordInputSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 

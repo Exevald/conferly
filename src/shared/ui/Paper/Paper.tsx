@@ -1,6 +1,6 @@
 import {type ReactNode} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Paper.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type PaperPadding = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 type PaperRadius = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl'

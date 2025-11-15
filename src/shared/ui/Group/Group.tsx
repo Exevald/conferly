@@ -1,6 +1,6 @@
 import {type ReactNode} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Group.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type GroupPosition = 'left' | 'center' | 'right' | 'apart'
 type GroupAlign = 'stretch' | 'center' | 'flex-start' | 'flex-end'

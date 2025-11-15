@@ -1,6 +1,6 @@
 import {type ReactNode} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Stack.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type StackAlign = 'stretch' | 'center' | 'flex-start' | 'flex-end'
 type StackJustify = 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around'

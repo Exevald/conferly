@@ -1,8 +1,8 @@
 'use client'
 
 import {type ReactNode} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './SelectList.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type SelectListSize = 'sm' | 'md' | 'lg'
 

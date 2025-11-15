@@ -1,6 +1,6 @@
 import {type ReactNode} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Text.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type TextSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 type TextColor = 'primary' | 'secondary' | 'muted' | 'inherit'
@@ -31,7 +31,7 @@ function Text({
 		styles[`text--${size}`],
 		styles[`text--${color}`],
 		align !== 'left' && styles[`text--${align}`],
-		lineClamp && styles[`text--clamp-${lineClamp}`],
+		lineClamp !== undefined && styles[`text--clamp-${lineClamp}`],
 		className,
 	)
 

@@ -1,6 +1,6 @@
 import {type ReactNode} from 'react'
-import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Center.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type CenterProps = {
 	children: ReactNode,
