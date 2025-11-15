@@ -31,7 +31,7 @@ function EventGridItem({
 					src={event.image}
 					height={160}
 					alt={event.name}
-					fallbackSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=160&fit=crop"
+					fallbackSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='160'%3E%3Crect fill='%236B7280' width='400' height='160'/%3E%3Ctext fill='%23FFFFFF' font-family='Arial' font-size='20' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3EEvent%3C/text%3E%3C/svg%3E"
 				/>
 			</div>
 			<Stack
