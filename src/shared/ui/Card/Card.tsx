@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Card.module.css'
 
 type CardPadding = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
@@ -26,14 +27,14 @@ function Card({
 	href,
 	style,
 }: CardProps) {
-	const cardClasses = [
+	const cardClasses = joinStyles(
 		styles.card,
 		styles[`card--padding-${padding}`],
 		styles[`card--radius-${radius}`],
 		withBorder && styles['card--withBorder'],
 		shadow && styles[`card--shadow-${shadow}`],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	const cardStyle = {
 		textDecoration: 'none',

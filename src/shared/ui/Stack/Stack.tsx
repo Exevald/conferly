@@ -1,4 +1,5 @@
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Stack.module.css'
 
 type StackAlign = 'stretch' | 'center' | 'flex-start' | 'flex-end'
@@ -71,13 +72,13 @@ function Stack({
 		}
 	}
 
-	const stackClasses = [
+	const stackClasses = joinStyles(
 		styles.stack,
 		styles[`stack--align-${align}`],
 		styles[`stack--justify-${justify}`],
 		textAlign && styles[`stack--text-${textAlign}`],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	return (
 		<div

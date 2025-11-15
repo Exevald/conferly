@@ -1,6 +1,7 @@
 'use client'
 
 import {type ChangeEvent, useState} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import {IconEye} from '../Icons/icons/IconEye'
 import {IconEyeOff} from '../Icons/icons/IconEyeOff'
 import styles from './PasswordInput.module.css'
@@ -38,18 +39,18 @@ function PasswordInput({
 }: PasswordInputProps) {
 	const [showPassword, setShowPassword] = useState(false)
 
-	const inputClasses = [
+	const inputClasses = joinStyles(
 		styles.input,
 		styles[`input--${size}`],
 		error && styles['input--error'],
 		disabled && styles['input--disabled'],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
-	const containerClasses = [
+	const containerClasses = joinStyles(
 		styles.container,
 		error && styles['container--error'],
-	].filter(Boolean).join(' ')
+	)
 
 	const togglePasswordVisibility = () => {
 		setShowPassword(!showPassword)

@@ -1,4 +1,5 @@
 import {type ChangeEvent, type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './TextInput.module.css'
 
 type TextInputSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
@@ -34,18 +35,18 @@ function TextInput({
 	onBlur,
 	style,
 }: TextInputProps) {
-	const inputClasses = [
+	const inputClasses = joinStyles(
 		styles.input,
 		styles[`input--${size}`],
 		error && styles['input--error'],
 		disabled && styles['input--disabled'],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
-	const containerClasses = [
+	const containerClasses = joinStyles(
 		styles.container,
 		error && styles['container--error'],
-	].filter(Boolean).join(' ')
+	)
 
 	return (
 		<div className={containerClasses}>

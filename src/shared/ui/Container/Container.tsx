@@ -1,4 +1,5 @@
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Container.module.css'
 
 type ContainerSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
@@ -38,11 +39,11 @@ function Container({
 		inlineStyles.flex = flex
 	}
 
-	const containerClasses = [
+	const containerClasses = joinStyles(
 		styles.container,
 		styles[`container--${size}`],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	return (
 		<div

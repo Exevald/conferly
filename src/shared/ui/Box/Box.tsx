@@ -1,4 +1,5 @@
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Box.module.css'
 
 type BoxProps = {
@@ -34,10 +35,10 @@ function Box({
 		inlineStyles.paddingRight = px
 	}
 
-	const boxClasses = [
+	const boxClasses = joinStyles(
 		styles.box,
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	const boxStyle = {
 		backgroundColor: bg,

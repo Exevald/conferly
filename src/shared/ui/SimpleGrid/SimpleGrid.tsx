@@ -1,5 +1,6 @@
 import {type ReactNode, useId} from 'react'
 import styles from './SimpleGrid.module.css'
+import {joinStyles} from '@/shared/utils/joinStyles'
 
 type SimpleGridCols = 1 | 2 | 3 | 4 | 5 | 6
 
@@ -34,11 +35,11 @@ function SimpleGrid({
 		inlineStyles.gap = spacing
 	}
 
-	const gridClasses = [
+	const gridClasses = joinStyles(
 		styles.grid,
 		styles[`grid--cols-${cols}`],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	const mediaQueries = breakpoints
 		? breakpoints.map(({minWidth, cols: colsCount}) =>
@@ -54,7 +55,7 @@ function SimpleGrid({
 				</style>
 			)}
 			<div
-				className={`${gridClasses} grid-${gridId}`}
+				className={joinStyles(gridClasses, `grid-${gridId}`)}
 				style={
 					Object.keys(inlineStyles).length > 0
 						? inlineStyles

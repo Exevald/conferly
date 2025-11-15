@@ -1,4 +1,5 @@
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Group.module.css'
 
 type GroupPosition = 'left' | 'center' | 'right' | 'apart'
@@ -27,13 +28,13 @@ function Group({
 		inlineStyles.gap = gap
 	}
 
-	const groupClasses = [
+	const groupClasses = joinStyles(
 		styles.group,
 		styles[`group--justify-${justify}`],
 		styles[`group--align-${align}`],
 		wrap && styles['group--wrap'],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	return (
 		<div

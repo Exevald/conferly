@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Button.module.css'
 
 type ButtonVariant = 'primary' | 'secondary' | 'subtle'
@@ -28,13 +29,13 @@ function Button({
 	fullWidth = false,
 	href,
 }: ButtonProps) {
-	const buttonClasses = [
+	const buttonClasses = joinStyles(
 		styles.button,
 		styles[`button--${variant}`],
 		styles[`button--${size}`],
 		fullWidth && styles['button--fullWidth'],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	if (href) {
 		return (

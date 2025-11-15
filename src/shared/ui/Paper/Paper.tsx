@@ -1,4 +1,5 @@
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Paper.module.css'
 
 type PaperPadding = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
@@ -23,14 +24,14 @@ function Paper({
 	className = '',
 	style,
 }: PaperProps) {
-	const paperClasses = [
+	const paperClasses = joinStyles(
 		styles.paper,
 		styles[`paper--padding-${padding}`],
 		styles[`paper--radius-${radius}`],
 		withBorder && styles['paper--withBorder'],
 		shadow && styles[`paper--shadow-${shadow}`],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	return (
 		<div

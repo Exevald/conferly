@@ -1,4 +1,5 @@
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Text.module.css'
 
 type TextSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
@@ -25,14 +26,14 @@ function Text({
 	className = '',
 	lineClamp,
 }: TextProps) {
-	const textClasses = [
+	const textClasses = joinStyles(
 		styles.text,
 		styles[`text--${size}`],
 		styles[`text--${color}`],
 		align !== 'left' && styles[`text--${align}`],
 		lineClamp && styles[`text--clamp-${lineClamp}`],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	const style = {
 		maxWidth: maxWidth

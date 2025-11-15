@@ -1,6 +1,7 @@
 'use client'
 
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './SelectList.module.css'
 
 type SelectListSize = 'sm' | 'md' | 'lg'
@@ -30,12 +31,12 @@ function SelectList({
 	variant = 'default',
 	className = '',
 }: SelectListProps) {
-	const listClasses = [
+	const listClasses = joinStyles(
 		styles.selectList,
 		styles[`selectList--${size}`],
 		styles[`selectList--${variant}`],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	const handleItemClick = (item: SelectListItem) => {
 		if (item.disabled) {
@@ -47,13 +48,13 @@ function SelectList({
 	return (
 		<div className={listClasses}>
 			{items.map(item => {
-				const itemClasses = [
+				const itemClasses = joinStyles(
 					styles.selectListItem,
 					styles[`selectListItem--${size}`],
 					styles[`selectListItem--${variant}`],
 					selectedId === item.id && styles['selectListItem--selected'],
 					item.disabled && styles['selectListItem--disabled'],
-				].filter(Boolean).join(' ')
+				)
 
 				const content = (
 					<>

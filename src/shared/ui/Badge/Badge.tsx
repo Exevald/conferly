@@ -1,4 +1,5 @@
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Badge.module.css'
 
 type BadgeColor = 'gray' | 'red' | 'blue' | 'green' | 'orange'
@@ -17,12 +18,12 @@ function Badge({
 	size = 'sm',
 	className = '',
 }: BadgeProps) {
-	const badgeClasses = [
+	const badgeClasses = joinStyles(
 		styles.badge,
 		styles[`badge--${color}`],
 		styles[`badge--${size}`],
 		className,
-	].join(' ')
+	)
 
 	return (
 		<span className={badgeClasses}>

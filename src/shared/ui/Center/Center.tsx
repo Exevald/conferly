@@ -1,4 +1,5 @@
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Center.module.css'
 
 type CenterProps = {
@@ -12,10 +13,10 @@ function Center({
 	className = '',
 	style,
 }: CenterProps) {
-	const centerClasses = [
+	const centerClasses = joinStyles(
 		styles.center,
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	return (
 		<div

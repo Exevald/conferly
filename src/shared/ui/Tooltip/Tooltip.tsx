@@ -1,6 +1,7 @@
 'use client'
 
 import {type ReactNode, useState} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Tooltip.module.css'
 
 type TooltipPosition = 'top' | 'bottom' | 'left' | 'right'
@@ -46,15 +47,15 @@ function Tooltip({
 		setIsVisible(false)
 	}
 
-	const tooltipContentClasses = [
+	const tooltipContentClasses = joinStyles(
 		styles.tooltipContent,
 		styles[`tooltip--${position}`],
 		multiline && styles['tooltipContent--multiline'],
-	].filter(Boolean).join(' ')
+	)
 
 	return (
 		<div
-			className={`${styles.tooltip} ${className}`}
+			className={joinStyles(styles.tooltip, className)}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 		>

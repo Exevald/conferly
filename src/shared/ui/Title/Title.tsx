@@ -1,4 +1,5 @@
 import {type ReactNode} from 'react'
+import {joinStyles} from '@/shared/utils/joinStyles'
 import styles from './Title.module.css'
 
 type TitleOrder = 1 | 2 | 3 | 4 | 5 | 6
@@ -27,14 +28,14 @@ function Title({
 }: TitleProps) {
 	const size = `h${order}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
-	const titleClasses = [
+	const titleClasses = joinStyles(
 		styles.title,
 		styles[`title--${size}`],
 		styles[`title--${color}`],
 		align !== 'left' && styles[`title--${align}`],
 		lineClamp && styles[`title--clamp-${lineClamp}`],
 		className,
-	].filter(Boolean).join(' ')
+	)
 
 	const style = {
 		maxWidth: maxWidth
