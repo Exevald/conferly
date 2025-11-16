@@ -1,3 +1,12 @@
+'use client'
+
+import {usePathname} from 'next/navigation'
+import {useMemo} from 'react'
+import {
+	CATEGORY_ROUTES,
+	projectRoutes,
+	useProjects,
+} from '@/entities/Project'
 import {
 	Group,
 	IconPlus,
@@ -7,34 +16,33 @@ import {
 } from '@/shared/ui'
 import {type SelectListItem} from '@/shared/ui/SelectList/SelectList'
 
-const projectItems: SelectListItem[] = [
-	{
-		id: 'project1',
-		label: 'Веб-разработка 1 курс (2...',
-	},
-	{
-		id: 'project2',
-		label: 'Институт',
-	},
-	{
-		id: 'project3',
-		label: 'Личное',
-	},
-	{
-		id: 'project4',
-		label: 'Марафон по веб-разработке',
-	},
-	{
-		id: 'project5',
-		label: 'Погружение в программирование',
-	},
-	{
-		id: 'work',
-		label: 'Работа',
-	},
-]
-
 function ProjectList() {
+	const pathname = usePathname()
+	const {data: projects = []} = useProjects()
+
+	const projectItems: SelectListItem[] = useMemo(
+		() => projects.map(project => ({
+			id: project.id,
+			label: project.name,
+			href: projectRoutes.detail(project.id),
+		})),
+		[projects],
+	)
+
+	const selectedId = useMemo(() => {
+		const projectIdMatch = pathname.match(/^\/projects\/([^/]+)$/)
+		if (!projectIdMatch) {
+			return undefined
+		}
+
+		const projectId = projectIdMatch[1]
+		const isCategory = CATEGORY_ROUTES.includes(projectId as typeof CATEGORY_ROUTES[number])
+
+		return isCategory
+			? undefined
+			: projectId
+	}, [pathname])
+
 	return (
 		<Stack gap={12}>
 			<Group
@@ -51,7 +59,7 @@ function ProjectList() {
 			</Group>
 			<SelectList
 				items={projectItems}
-				selectedId="work"
+				selectedId={selectedId}
 				variant="subtle"
 			/>
 		</Stack>
