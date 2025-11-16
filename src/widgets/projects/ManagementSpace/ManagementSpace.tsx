@@ -1,14 +1,28 @@
 'use client'
 
+import {usePathname} from 'next/navigation'
+import {type PropsWithChildren, useMemo} from 'react'
 import {TopBar} from './view/TopBar/TopBar'
-import {useProject} from '@/entities/Project'
+import {CATEGORY_ROUTES, useProject} from '@/entities/Project'
 import {Container, Stack} from '@/shared/ui'
 
-type ManagementSpaceProps = {
-	projectId?: string,
-}
+function ManagementSpace({children}: PropsWithChildren) {
+	const pathname = usePathname()
 
-function ManagementSpace({projectId}: ManagementSpaceProps) {
+	const projectId = useMemo(() => {
+		const match = pathname.match(/^\/projects\/([^/]+)$/)
+		if (!match) {
+			return undefined
+		}
+
+		const id = match[1]
+		const isCategory = CATEGORY_ROUTES.includes(id as typeof CATEGORY_ROUTES[number])
+
+		return isCategory
+			? undefined
+			: id
+	}, [pathname])
+
 	const {
 		data: project,
 		isLoading,
@@ -25,6 +39,7 @@ function ManagementSpace({projectId}: ManagementSpaceProps) {
 					project={project ?? null}
 					loading={isLoading}
 				/>
+				{children}
 			</Stack>
 		</Container>
 	)

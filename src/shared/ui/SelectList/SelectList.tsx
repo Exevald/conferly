@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import {type ReactNode} from 'react'
 import styles from './SelectList.module.css'
 import {joinStyles} from '@/shared/utils/joinStyles'
@@ -71,14 +72,14 @@ function SelectList({
 
 				if (item.href) {
 					return (
-						<a
+						<Link
 							key={item.id}
 							href={item.href}
 							className={itemClasses}
 							onClick={() => handleItemClick(item)}
 						>
 							{content}
-						</a>
+						</Link>
 					)
 				}
 
