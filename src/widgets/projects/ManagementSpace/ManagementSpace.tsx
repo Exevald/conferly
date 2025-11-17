@@ -32,6 +32,7 @@ function ManagementSpace({children}: PropsWithChildren) {
 		<Box
 			py={48}
 			px={48}
+			style={{width: '100%'}}
 		>
 			<Stack gap={24}>
 				<TopBar

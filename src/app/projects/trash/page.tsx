@@ -1,5 +1,9 @@
+import {ProjectsTable} from '@/widgets/projects/ProjectsTable/ProjectsTable'
+
 function TrashProjectsPage() {
-	return null
+	return (
+		<ProjectsTable title="Корзина" />
+	)
 }
 
 export default TrashProjectsPage

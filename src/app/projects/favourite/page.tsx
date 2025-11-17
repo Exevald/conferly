@@ -1,6 +1,9 @@
+import {ProjectsTable} from '@/widgets/projects/ProjectsTable/ProjectsTable'
+
 function FavouriteProjectsPage() {
-	return null
+	return (
+		<ProjectsTable title="Избранные проекты" />
+	)
 }
 
 export default FavouriteProjectsPage
-
