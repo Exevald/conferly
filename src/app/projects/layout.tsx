@@ -1,3 +1,5 @@
+'use client'
+
 import {type PropsWithChildren} from 'react'
 import {ManagementSpace} from '@/widgets/projects/ManagementSpace/ManagementSpace'
 import {NavigationPanel} from '@/widgets/projects/NavigationPanel/NavigationPanel'
