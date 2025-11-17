@@ -4,7 +4,7 @@ import {usePathname} from 'next/navigation'
 import {type PropsWithChildren, useMemo} from 'react'
 import {TopBar} from './view/TopBar/TopBar'
 import {CATEGORY_ROUTES, useProject} from '@/entities/Project'
-import {Container, Stack} from '@/shared/ui'
+import {Box, Stack} from '@/shared/ui'
 
 function ManagementSpace({children}: PropsWithChildren) {
 	const pathname = usePathname()
@@ -29,8 +29,7 @@ function ManagementSpace({children}: PropsWithChildren) {
 	} = useProject(projectId)
 
 	return (
-		<Container
-			size="lg"
+		<Box
 			py={48}
 			px={48}
 		>
@@ -41,7 +40,7 @@ function ManagementSpace({children}: PropsWithChildren) {
 				/>
 				{children}
 			</Stack>
-		</Container>
+		</Box>
 	)
 }
 

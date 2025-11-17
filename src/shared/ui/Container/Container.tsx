@@ -2,11 +2,9 @@ import {type ReactNode} from 'react'
 import styles from './Container.module.css'
 import {joinStyles} from '@/shared/utils/joinStyles'
 
-type ContainerSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-
 type ContainerProps = {
 	children: ReactNode,
-	size?: ContainerSize,
+	maxWidth?: number,
 	className?: string,
 	/** vertical padding */
 	py?: number,
@@ -17,13 +15,15 @@ type ContainerProps = {
 
 function Container({
 	children,
-	size = 'lg',
+	maxWidth = 1200,
 	className = '',
 	py,
 	px,
 	flex,
 }: ContainerProps) {
-	const inlineStyles: React.CSSProperties = {}
+	const inlineStyles: React.CSSProperties = {
+		maxWidth,
+	}
 
 	if (py !== undefined) {
 		inlineStyles.paddingTop = py
@@ -41,7 +41,6 @@ function Container({
 
 	const containerClasses = joinStyles(
 		styles.container,
-		styles[`container--${size}`],
 		className,
 	)
 
@@ -62,5 +61,4 @@ function Container({
 export {
 	Container,
 	type ContainerProps,
-	type ContainerSize,
 }

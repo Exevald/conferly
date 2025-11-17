@@ -38,7 +38,7 @@ async function HomePage({searchParams}: HomePageProps) {
 
 	return (
 		<Container
-			size="lg"
+			maxWidth={1200}
 			py={48}
 			flex="1"
 		>

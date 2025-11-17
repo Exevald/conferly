@@ -22,7 +22,13 @@ function Header() {
 				alignItems: 'center',
 			}}
 		>
-			<Container size="lg">
+			<div
+				style={{
+					width: '100%',
+					paddingLeft: '5%',
+					paddingRight: '5%',
+				}}
+			>
 				<Group
 					justify="apart"
 					align="center"
@@ -58,7 +64,7 @@ function Header() {
 						</Button>
 					</Group>
 				</Group>
-			</Container>
+			</div>
 		</Box>
 	)
 }

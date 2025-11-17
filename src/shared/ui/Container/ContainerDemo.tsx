@@ -19,39 +19,39 @@ function ContainerDemo() {
 		<Stack gap={16}>
 			<Title order={4}>{'Размеры'}</Title>
 			<Stack gap={12}>
-				<Container size="xs">
+				<Container maxWidth={576}>
 					<Box
 						style={boxStyle}
 					>
-						<Text>{'Контейнер XS'}</Text>
+						<Text>{'Контейнер 576px'}</Text>
 					</Box>
 				</Container>
-				<Container size="sm">
+				<Container maxWidth={768}>
 					<Box
 						style={boxStyle}
 					>
-						<Text>{'Контейнер SM'}</Text>
+						<Text>{'Контейнер 768px'}</Text>
 					</Box>
 				</Container>
-				<Container size="md">
+				<Container maxWidth={992}>
 					<Box
 						style={boxStyle}
 					>
-						<Text>{'Контейнер MD'}</Text>
+						<Text>{'Контейнер 992px'}</Text>
 					</Box>
 				</Container>
-				<Container size="lg">
+				<Container maxWidth={1200}>
 					<Box
 						style={boxStyle}
 					>
-						<Text>{'Контейнер LG'}</Text>
+						<Text>{'Контейнер 1200px'}</Text>
 					</Box>
 				</Container>
-				<Container size="xl">
+				<Container maxWidth={1400}>
 					<Box
 						style={boxStyle}
 					>
-						<Text>{'Контейнер XL'}</Text>
+						<Text>{'Контейнер 1400px'}</Text>
 					</Box>
 				</Container>
 			</Stack>
