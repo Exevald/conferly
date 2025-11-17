@@ -8,6 +8,7 @@ import {useTableProps} from './hooks/useTableProps'
 import styles from './Table.module.css'
 import {type TableProps} from './types'
 import {TableActions} from './view/TableActions'
+import {TableRowActions} from './view/TableRowActions'
 import {joinStyles} from '@/shared/utils/joinStyles'
 
 function Table<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_ID, ROW>) {
@@ -21,7 +22,9 @@ function Table<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_ID, ROW>)
 		getSelectedRows,
 		getCellData,
 		columns,
-		actions,
+		rowActions,
+		selectionActions,
+		hasRowActions,
 		onRowClick,
 		emptyState,
 		className,
@@ -53,7 +56,8 @@ function Table<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_ID, ROW>)
 	}
 
 	const selectedRows = getSelectedRows()
-	const hasActions = actions && actions.length > 0 && selectedRows.length > 0
+	const hasSelectionActions = selectionActions && selectionActions.length > 0 && selectedRows.length > 0
+	const isMultiSelection = selection?.type === 'multi'
 
 	const handleRowClick = (row: ROW) => {
 		if (selection) {
@@ -110,6 +114,9 @@ function Table<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_ID, ROW>)
 						)}
 					</div>
 				))}
+				{hasRowActions && (
+					<div className={styles.tableHeaderCell} />
+				)}
 			</div>
 			<div className={styles.tableBody}>
 				{/* TODO: Виртуализация - обернуть в react-window или react-virtual */}
@@ -147,15 +154,27 @@ function Table<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_ID, ROW>)
 									{getCellData(row, column.id)}
 								</div>
 							))}
+							{hasRowActions && rowActions && (
+								<div
+									className={styles.tableCell}
+									onClick={e => e.stopPropagation()}
+								>
+									<TableRowActions
+										actions={rowActions}
+										row={row}
+									/>
+								</div>
+							)}
 						</div>
 					)
 				})}
 			</div>
-			{hasActions && selection && actions && (
+			{hasSelectionActions && selection && selectionActions && (
 				<div className={styles.tableActions}>
 					<TableActions
-						props={props}
+						actions={selectionActions}
 						selectedRows={selectedRows}
+						isMultiSelection={isMultiSelection}
 					/>
 				</div>
 			)}

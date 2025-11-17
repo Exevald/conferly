@@ -70,6 +70,10 @@
 	background-color: var(--color-background-secondary);
 }
 
+.tableRow:hover .rowActionsButton {
+	opacity: 1;
+}
+
 .tableRow--clickable {
 	cursor: pointer;
 }

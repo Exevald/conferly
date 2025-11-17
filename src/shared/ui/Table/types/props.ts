@@ -20,17 +20,20 @@ type TablePropsBase<COLUMN_ID extends string, ROW> = {
 
 type TablePropsWithSingleSelection<COLUMN_ID extends string, ROW> = TablePropsBase<COLUMN_ID, ROW> & {
 	selection: TableSelectionSingle<ROW>,
-	actions?: TableActionSingle<ROW>[],
+	rowActions?: TableActionSingle<ROW>[],
+	selectionActions?: TableActionSingle<ROW>[],
 }
 
 type TablePropsWithMultiSelection<COLUMN_ID extends string, ROW> = TablePropsBase<COLUMN_ID, ROW> & {
 	selection: TableSelectionMulti<ROW>,
-	actions?: TableActionMulti<ROW>[],
+	rowActions?: TableActionSingle<ROW>[],
+	selectionActions?: TableActionMulti<ROW>[],
 }
 
 type TablePropsWithoutSelection<COLUMN_ID extends string, ROW> = TablePropsBase<COLUMN_ID, ROW> & {
 	selection?: never,
-	actions?: never,
+	rowActions?: TableActionSingle<ROW>[],
+	selectionActions?: never,
 }
 
 type TableProps<COLUMN_ID extends string, ROW> =

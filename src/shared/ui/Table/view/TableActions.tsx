@@ -1,72 +1,48 @@
 import {Button} from '../../Button/Button'
 import {Group} from '../../Group/Group'
-import {type TableProps} from '../types'
-import {isMultiSelectionProps, isSingleSelectionProps} from '../utils/typeGuards'
+import {type TableActionMulti, type TableActionSingle} from '../types'
 
-type TableActionsProps<COLUMN_ID extends string, ROW> = {
-	props: TableProps<COLUMN_ID, ROW>,
+type TableActionsProps<ROW> = {
+	actions: (TableActionSingle<ROW> | TableActionMulti<ROW>)[],
 	selectedRows: ROW[],
+	isMultiSelection: boolean,
 }
 
-function TableActions<COLUMN_ID extends string, ROW>({
-	props,
+function TableActions<ROW>({
+	actions,
 	selectedRows,
-}: TableActionsProps<COLUMN_ID, ROW>) {
-	if (isSingleSelectionProps(props) && props.actions) {
-		return (
-			<>
-				{props.actions.map((action, actionIndex) => {
-					const actionKey = `${action.text}-${actionIndex}`
+	isMultiSelection,
+}: TableActionsProps<ROW>) {
+	return (
+		<>
+			{actions.map((action, actionIndex) => {
+				const actionKey = `${action.text}-${actionIndex}`
 
-					return (
-						<Button
-							key={actionKey}
-							variant="primary"
-							size="sm"
-							onClick={() => {
+				return (
+					<Button
+						key={actionKey}
+						variant="primary"
+						size="sm"
+						onClick={() => {
+							if (isMultiSelection) {
+								(action as TableActionMulti<ROW>).onClick(selectedRows)
+							}
+							else {
 								if (selectedRows.length > 0) {
-									action.onClick(selectedRows[0])
+									(action as TableActionSingle<ROW>).onClick(selectedRows[0])
 								}
-							}}
-						>
-							<Group gap={4}>
-								{action.icon}
-								{action.text}
-							</Group>
-						</Button>
-					)
-				})}
-			</>
-		)
-	}
-
-	if (isMultiSelectionProps(props) && props.actions) {
-		return (
-			<>
-				{props.actions.map((action, actionIndex) => {
-					const actionKey = `${action.text}-${actionIndex}`
-
-					return (
-						<Button
-							key={actionKey}
-							variant="primary"
-							size="sm"
-							onClick={() => {
-								action.onClick(selectedRows)
-							}}
-						>
-							<Group gap={4}>
-								{action.icon}
-								{action.text}
-							</Group>
-						</Button>
-					)
-				})}
-			</>
-		)
-	}
-
-	return null
+							}
+						}}
+					>
+						<Group gap={4}>
+							{action.icon}
+							{action.text}
+						</Group>
+					</Button>
+				)
+			})}
+		</>
+	)
 }
 
 export {

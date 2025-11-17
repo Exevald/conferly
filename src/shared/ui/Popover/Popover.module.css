@@ -1,0 +1,19 @@
+.popover {
+	position: relative;
+	display: inline-block;
+}
+
+.popoverTrigger {
+	display: inline-block;
+}
+
+.popoverContent {
+	position: fixed;
+	z-index: 1000;
+	background-color: var(--color-background-primary);
+	border: 1px solid var(--color-border-light);
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-lg);
+	padding: 8px;
+	min-width: 160px;
+}

@@ -1,0 +1,25 @@
+.rowActionsButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border: none;
+	background: transparent;
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+	color: var(--color-text-secondary);
+	transition: background-color 0.15s ease, color 0.15s ease;
+	opacity: 0;
+}
+
+.rowActionsButton:hover {
+	background-color: var(--color-background-secondary);
+	color: var(--color-text-primary);
+}
+
+.rowActionButton {
+	width: 100%;
+	justify-content: flex-start;
+}
+

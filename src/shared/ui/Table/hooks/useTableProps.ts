@@ -6,7 +6,8 @@ function useTableProps<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_I
 		rows,
 		getCellData,
 		columns,
-		actions,
+		rowActions,
+		selectionActions,
 		onRowClick,
 		filter,
 		selection,
@@ -33,6 +34,8 @@ function useTableProps<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_I
 		return filtered
 	}, [rows, filter, activeFilterColumnId, columnFilterFn])
 
+	const hasRowActions = rowActions && rowActions.length > 0
+
 	const gridTemplateColumns = useMemo(() => {
 		const cols: string[] = []
 		if (selection) {
@@ -51,8 +54,11 @@ function useTableProps<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_I
 				cols.push('1fr')
 			}
 		})
+		if (hasRowActions) {
+			cols.push('auto')
+		}
 		return cols.join(' ')
-	}, [columns, selection])
+	}, [columns, selection, hasRowActions])
 
 	const isRowSelected = (row: ROW): boolean => {
 		if (!selection) {
@@ -142,7 +148,9 @@ function useTableProps<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_I
 		getSelectedRows,
 		getCellData,
 		columns,
-		actions,
+		rowActions,
+		selectionActions,
+		hasRowActions,
 		onRowClick,
 		emptyState,
 		className,

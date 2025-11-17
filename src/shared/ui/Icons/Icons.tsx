@@ -19,5 +19,6 @@ export {IconSettings} from './icons/IconSettings'
 export {IconUpload} from './icons/IconUpload'
 export {IconChevronUp} from './icons/IconChevronUp'
 export {IconChevronDown} from './icons/IconChevronDown'
+export {IconMoreVertical} from './icons/IconMoreVertical'
 
 export type {IconProps} from './types'

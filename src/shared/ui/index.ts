@@ -25,6 +25,8 @@ export {SimpleGrid} from './SimpleGrid/SimpleGrid'
 export {Skeleton} from './Skeleton/Skeleton'
 export {TextInput} from './TextInput/TextInput'
 export {Tooltip} from './Tooltip/Tooltip'
+export {Popover} from './Popover/Popover'
+export type {PopoverProps, PopoverPosition} from './Popover/Popover'
 export {Image} from './Image/Image'
 export {Table} from './Table/Table'
 export type {
@@ -60,6 +62,7 @@ export {
 	IconTrash,
 	IconUpload,
 	IconUsers,
+	IconMoreVertical,
 } from './Icons/Icons'
 
 export {BadgeDemo} from './Badge/BadgeDemo'
