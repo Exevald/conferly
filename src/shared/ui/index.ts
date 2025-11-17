@@ -26,10 +26,23 @@ export {Skeleton} from './Skeleton/Skeleton'
 export {TextInput} from './TextInput/TextInput'
 export {Tooltip} from './Tooltip/Tooltip'
 export {Image} from './Image/Image'
+export {Table} from './Table/Table'
+export type {
+	TableActionMulti,
+	TableActionSingle,
+	TableColumn,
+	TableFilter,
+	TableProps,
+	TableSelection,
+	TableSelectionMulti,
+	TableSelectionSingle,
+} from './Table/types'
 
 export {
 	IconCalendar,
 	IconCalendarOff,
+	IconChevronDown,
+	IconChevronUp,
 	IconClock,
 	IconEye,
 	IconEyeOff,
