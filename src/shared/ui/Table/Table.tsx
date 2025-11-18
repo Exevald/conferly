@@ -66,12 +66,6 @@ function Table<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_ID, ROW>)
 		onRowClick?.(row)
 	}
 
-	const handleCheckboxClick = (e: React.MouseEvent, row: ROW) => {
-		e.stopPropagation()
-		handleRowSelect(row)
-	}
-
-
 	return (
 		<div className={joinStyles(styles.table, className)}>
 			<div
@@ -93,25 +87,27 @@ function Table<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_ID, ROW>)
 						key={column.id}
 						className={styles.tableHeaderCell}
 					>
-						<div style={{fontWeight: 600}}>
-							<Text
-								size="sm"
-								color="secondary"
-							>
-								{column.label}
-							</Text>
-						</div>
-						{filter?.onFilterOpen && (
-							<div
-								className={styles.tableFilterIcon}
-								onClick={e => {
-									e.stopPropagation()
-									handleFilterOpen(column.id)
-								}}
-							>
-								<IconSearch size={14} />
+						<div className={styles.tableHeaderCellContent}>
+							<div style={{fontWeight: 600}}>
+								<Text
+									size="sm"
+									color="secondary"
+								>
+									{column.label}
+								</Text>
 							</div>
-						)}
+							{filter?.onFilterOpen && (
+								<div
+									className={styles.tableFilterIcon}
+									onClick={e => {
+										e.stopPropagation()
+										handleFilterOpen(column.id)
+									}}
+								>
+									<IconSearch size={14} />
+								</div>
+							)}
+						</div>
 					</div>
 				))}
 				{hasRowActions && (
@@ -136,10 +132,7 @@ function Table<COLUMN_ID extends string, ROW>(props: TableProps<COLUMN_ID, ROW>)
 							style={{'--table-columns': gridTemplateColumns} as React.CSSProperties}
 						>
 							{selection && (
-								<div
-									className={styles.tableCheckbox}
-									onClick={e => handleCheckboxClick(e, row)}
-								>
+								<div className={styles.tableCheckbox}>
 									<Checkbox
 										checked={isSelected}
 										onChange={() => handleRowSelect(row)}

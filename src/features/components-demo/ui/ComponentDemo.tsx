@@ -9,6 +9,7 @@ import {
 	SkeletonDemo,
 	Stack,
 	StackDemo,
+	TableDemo,
 	Text,
 	TextDemo,
 	TextInputDemo,
@@ -49,6 +50,8 @@ function ComponentDemo({componentId}: ComponentDemoProps) {
 			return <BoxDemo />
 		case 'select-list':
 			return <SelectListDemo />
+		case 'table':
+			return <TableDemo />
 		default:
 			return (
 				<Stack gap={16}>
