@@ -1,0 +1,9 @@
+{
+  "git.defaultRemoteName": "gitlab",
+  "git.remoteName": "gitlab",
+
+  "gitlab.remote": "gitlab",
+
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false
+}
